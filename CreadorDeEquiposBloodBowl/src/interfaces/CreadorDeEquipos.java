@@ -14,12 +14,16 @@ import javax.swing.SwingConstants;
 import enumeraciones.Razas;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class CreadorDeEquipos extends JPanel{
 	private JTextField textField;
 	private JTextField textField_1;
+	private Ventana ventana;
 	
-	public CreadorDeEquipos() {
+	public CreadorDeEquipos(Ventana v) {
+		ventana=v;
 		setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("Creador de Equipos");
@@ -69,6 +73,12 @@ public class CreadorDeEquipos extends JPanel{
 		add(panelInferior, BorderLayout.SOUTH);
 		
 		JButton btnNewButton = new JButton("Atras");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.irAMenuPrincipal();
+			}
+		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panelInferior.add(btnNewButton);
 		

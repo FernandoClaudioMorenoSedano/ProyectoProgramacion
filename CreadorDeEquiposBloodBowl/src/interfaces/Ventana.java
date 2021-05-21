@@ -28,14 +28,14 @@ public class Ventana extends JFrame{
 		getContentPane().add(panel, BorderLayout.CENTER);
 		this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
 		
-		this.menuPrincipal=new MenuPrincipal();
+		this.menuPrincipal=new MenuPrincipal(this);
 		this.setContentPane(menuPrincipal);		
 		this.setVisible(true);
 	}
 	
 	public void irACreadorDeEquipos() {
 		if(this.creadorDeEquipos==null) {
-			this.creadorDeEquipos=new CreadorDeEquipos();
+			this.creadorDeEquipos=new CreadorDeEquipos(this);
 		}
 		if(this.menuPrincipal!=null) {
 			this.menuPrincipal.setVisible(false);
@@ -44,5 +44,15 @@ public class Ventana extends JFrame{
 		this.creadorDeEquipos.setVisible(true);
 	}
 	
+	public void irAMenuPrincipal() {
+		if(this.menuPrincipal==null) {
+			this.menuPrincipal=new MenuPrincipal(this);
+		}
+		if(this.creadorDeEquipos!=null) {
+			this.creadorDeEquipos.setVisible(false);
+		}
+		this.setContentPane(this.menuPrincipal);
+		this.menuPrincipal.setVisible(true);
+	}
 }
 
