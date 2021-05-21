@@ -11,6 +11,7 @@ import javax.swing.SwingConstants;
 
 import enumeraciones.Razas;
 import javax.swing.JTextField;
+import javax.swing.JButton;
 
 public class CreadorDeEquipos extends JPanel{
 	private JTextField textField;
@@ -20,6 +21,7 @@ public class CreadorDeEquipos extends JPanel{
 		setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("Creador de Equipos");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblNewLabel, BorderLayout.NORTH);
 		
@@ -63,6 +65,14 @@ public class CreadorDeEquipos extends JPanel{
 		
 		JPanel panelInferior = new JPanel();
 		add(panelInferior, BorderLayout.SOUTH);
+		
+		JButton btnNewButton = new JButton("Atras");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		panelInferior.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Siguiente");
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		panelInferior.add(btnNewButton_1);
 		
 		
 	}
