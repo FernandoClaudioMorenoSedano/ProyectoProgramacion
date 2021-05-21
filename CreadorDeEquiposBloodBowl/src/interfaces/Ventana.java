@@ -13,7 +13,7 @@ public class Ventana extends JFrame{
 	private CreadorDeEquipos creadorDeEquipos;
 	private MenuPrincipal menuPrincipal;
 	public Ventana() {
-		this.setSize(500,500);
+		this.setSize(500,600);
 		this.setTitle("Blood Bowl");
 		//this.setAlwaysOnTop(true);
 		try {
