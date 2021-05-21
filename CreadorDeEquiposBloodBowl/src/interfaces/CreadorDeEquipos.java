@@ -2,6 +2,8 @@ package interfaces;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
@@ -24,7 +26,7 @@ public class CreadorDeEquipos extends JPanel{
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblNewLabel, BorderLayout.NORTH);
-		
+	
 		JPanel panelCentral = new JPanel();
 		add(panelCentral, BorderLayout.CENTER);
 		panelCentral.setLayout(null);
