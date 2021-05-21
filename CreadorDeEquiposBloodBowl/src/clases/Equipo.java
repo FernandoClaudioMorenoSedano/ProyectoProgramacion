@@ -1,8 +1,8 @@
-package Clases;
+package clases;
 
 import java.util.ArrayList;
 
-import Enumeraciones.Razas;
+import enumeraciones.Razas;
 
 public class Equipo {
 	private Entrenador entrenador;
