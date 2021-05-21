@@ -3,12 +3,14 @@ package interfaces;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JLabel;
+import javax.swing.SpinnerNumberModel;
 
 public class EquipoCaos extends JPanel{
 	public EquipoCaos() {
 		setLayout(null);
 		
 		JSpinner spinner = new JSpinner();
+		spinner.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		spinner.setBounds(120, 220, 30, 20);
 		add(spinner);
 		
@@ -17,6 +19,7 @@ public class EquipoCaos extends JPanel{
 		add(lblNewLabel);
 		
 		JSpinner spinner_1 = new JSpinner();
+		spinner_1.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		spinner_1.setBounds(350, 220, 30, 20);
 		add(spinner_1);
 		
@@ -25,6 +28,7 @@ public class EquipoCaos extends JPanel{
 		add(lblNewLabel_1);
 		
 		JSpinner spinner_2 = new JSpinner();
+		spinner_2.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		spinner_2.setBounds(244, 392, 30, 20);
 		add(spinner_2);
 		

@@ -3,12 +3,14 @@ package interfaces;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
 
 public class EquipoEnano extends JPanel{
 	public EquipoEnano() {
 		setLayout(null);
 		
 		JSpinner spinner = new JSpinner();
+		spinner.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		spinner.setBounds(84, 210, 30, 20);
 		add(spinner);
 		
@@ -17,6 +19,7 @@ public class EquipoEnano extends JPanel{
 		add(lblNewLabel);
 		
 		JSpinner spinner_1 = new JSpinner();
+		spinner_1.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		spinner_1.setBounds(226, 210, 30, 20);
 		add(spinner_1);
 		
@@ -25,6 +28,7 @@ public class EquipoEnano extends JPanel{
 		add(lblNewLabel_1);
 		
 		JSpinner spinner_2 = new JSpinner();
+		spinner_2.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		spinner_2.setBounds(375, 210, 30, 20);
 		add(spinner_2);
 		
@@ -33,6 +37,7 @@ public class EquipoEnano extends JPanel{
 		add(lblNewLabel_2);
 		
 		JSpinner spinner_3 = new JSpinner();
+		spinner_3.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		spinner_3.setBounds(119, 431, 30, 20);
 		add(spinner_3);
 		
@@ -41,6 +46,7 @@ public class EquipoEnano extends JPanel{
 		add(lblNewLabel_3);
 		
 		JSpinner spinner_4 = new JSpinner();
+		spinner_4.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		spinner_4.setBounds(321, 431, 30, 20);
 		add(spinner_4);
 		
