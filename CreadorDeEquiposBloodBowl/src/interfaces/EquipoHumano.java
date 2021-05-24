@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.ImageIcon;
 
 public class EquipoHumano extends JPanel{
 	private Ventana ventana;
