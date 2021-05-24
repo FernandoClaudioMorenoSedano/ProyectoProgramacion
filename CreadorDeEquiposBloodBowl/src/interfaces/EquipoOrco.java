@@ -22,7 +22,7 @@ public class EquipoOrco extends JPanel{
 		add(lineaOrco);
 		
 		JLabel lblNewLabel = new JLabel("Linea Orco");
-		lblNewLabel.setBounds(45, 248, 49, 20);
+		lblNewLabel.setBounds(45, 248, 69, 20);
 		add(lblNewLabel);
 		
 		JSpinner blizterOrco = new JSpinner();
@@ -31,7 +31,7 @@ public class EquipoOrco extends JPanel{
 		add(blizterOrco);
 		
 		JLabel lblNewLabel_1 = new JLabel("Blizter Orco");
-		lblNewLabel_1.setBounds(220, 252, 53, 13);
+		lblNewLabel_1.setBounds(214, 252, 69, 13);
 		add(lblNewLabel_1);
 		
 		JSpinner lanzadorOrco = new JSpinner();
@@ -40,7 +40,7 @@ public class EquipoOrco extends JPanel{
 		add(lanzadorOrco);
 		
 		JLabel lblNewLabel_2 = new JLabel("Lanzador Orco");
-		lblNewLabel_2.setBounds(361, 252, 69, 13);
+		lblNewLabel_2.setBounds(354, 252, 85, 13);
 		add(lblNewLabel_2);
 		
 		JSpinner orcoNegro = new JSpinner();
@@ -49,7 +49,7 @@ public class EquipoOrco extends JPanel{
 		add(orcoNegro);
 		
 		JLabel lblNewLabel_3 = new JLabel("Orco Negro");
-		lblNewLabel_3.setBounds(45, 534, 60, 13);
+		lblNewLabel_3.setBounds(45, 534, 69, 20);
 		add(lblNewLabel_3);
 		
 		JSpinner troll = new JSpinner();
@@ -67,7 +67,7 @@ public class EquipoOrco extends JPanel{
 		add(goblin);
 		
 		JLabel lblNewLabel_5 = new JLabel("Goblin");
-		lblNewLabel_5.setBounds(377, 534, 35, 13);
+		lblNewLabel_5.setBounds(373, 538, 42, 13);
 		add(lblNewLabel_5);
 		
 		JButton btnNewButton = new JButton("Crear");
@@ -80,11 +80,14 @@ public class EquipoOrco extends JPanel{
 				   (int)orcoNegro.getValue()+ 
 				   (int)troll.getValue()+
 				   (int)goblin.getValue()>16){
+					JOptionPane.showMessageDialog(ventana,
+							"No puedes tener mas de 16 jugadores en el equipo",
+							"Login fallido",
+							JOptionPane.ERROR_MESSAGE);
+				}else {
+					ventana.irAMenuPrincipal();
 				}
-				JOptionPane.showMessageDialog(ventana,
-						"No puedes tener mas de 16 jugadores en el equipo",
-						"Login fallido",
-						JOptionPane.ERROR_MESSAGE);
+				
 					
 				}
 			});

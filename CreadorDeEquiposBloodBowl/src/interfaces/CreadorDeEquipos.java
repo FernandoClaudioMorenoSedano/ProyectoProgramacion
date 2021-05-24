@@ -87,7 +87,17 @@ public class CreadorDeEquipos extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(comboRaza.getSelectedItem().equals(Razas.HUMANO)) {
-					
+					ventana.irAEquipoHumano();
+				}else if(comboRaza.getSelectedItem().equals(Razas.ORCO)) {
+					ventana.irAEquipoOrco();
+				}else if(comboRaza.getSelectedItem().equals(Razas.ENANO)) {
+					ventana.irAEquipoEnano();
+				}else if(comboRaza.getSelectedItem().equals(Razas.ELFO)) {
+					ventana.irAEquipoElfo();
+				}else if(comboRaza.getSelectedItem().equals(Razas.CAOS)) {
+					ventana.irAEquipoCaos();
+				}else if(comboRaza.getSelectedItem().equals(Razas.NOMUERTO)) {
+					ventana.irAEquipoNoMuerto();
 				}
 			}
 		});

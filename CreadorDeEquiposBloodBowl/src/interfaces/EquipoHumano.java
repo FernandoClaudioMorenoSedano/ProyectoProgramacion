@@ -24,7 +24,7 @@ public class EquipoHumano extends JPanel{
 		add(lineaHumano);
 		
 		JLabel lblNewLabel = new JLabel("Linea Humano");
-		lblNewLabel.setBounds(67, 250, 69, 20);
+		lblNewLabel.setBounds(58, 250, 81, 20);
 		add(lblNewLabel);
 		
 		JSpinner blizterHumano = new JSpinner();
@@ -33,7 +33,7 @@ public class EquipoHumano extends JPanel{
 		add(blizterHumano);
 		
 		JLabel lblNewLabel_1 = new JLabel("Blizter Humano");
-		lblNewLabel_1.setBounds(206, 254, 69, 13);
+		lblNewLabel_1.setBounds(197, 254, 96, 13);
 		add(lblNewLabel_1);
 		
 		JSpinner lanzadorHumano = new JSpinner();
@@ -42,7 +42,7 @@ public class EquipoHumano extends JPanel{
 		add(lanzadorHumano);
 		
 		JLabel lblNewLabel_2 = new JLabel("Lanzador Humano");
-		lblNewLabel_2.setBounds(347, 254, 82, 13);
+		lblNewLabel_2.setBounds(337, 254, 115, 13);
 		add(lblNewLabel_2);
 		
 		JSpinner receptorHumano = new JSpinner();
@@ -51,7 +51,7 @@ public class EquipoHumano extends JPanel{
 		add(receptorHumano);
 		
 		JLabel lblNewLabel_3 = new JLabel("Receptor Humano");
-		lblNewLabel_3.setBounds(97, 529, 82, 13);
+		lblNewLabel_3.setBounds(84, 529, 115, 13);
 		add(lblNewLabel_3);
 		
 		JSpinner ogro = new JSpinner();
@@ -60,7 +60,7 @@ public class EquipoHumano extends JPanel{
 		add(ogro);
 		
 		JLabel lblNewLabel_4 = new JLabel("Ogro");
-		lblNewLabel_4.setBounds(321, 529, 30, 13);
+		lblNewLabel_4.setBounds(321, 529, 30, 20);
 		add(lblNewLabel_4);
 		
 		JButton btnNewButton = new JButton("Crear");
@@ -72,11 +72,14 @@ public class EquipoHumano extends JPanel{
 				   (int)lanzadorHumano.getValue()+
 				   (int)receptorHumano.getValue()+ 
 				   (int)ogro.getValue()>16){
+					JOptionPane.showMessageDialog(ventana,
+							"No puedes tener mas de 16 jugadores en el equipo",
+							"Login fallido",
+							JOptionPane.ERROR_MESSAGE);
+				}else {
+					ventana.irAMenuPrincipal();
 				}
-				JOptionPane.showMessageDialog(ventana,
-						"No puedes tener mas de 16 jugadores en el equipo",
-						"Login fallido",
-						JOptionPane.ERROR_MESSAGE);
+				
 					
 				}
 			});

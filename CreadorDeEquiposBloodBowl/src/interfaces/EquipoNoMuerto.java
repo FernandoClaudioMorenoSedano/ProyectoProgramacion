@@ -23,7 +23,7 @@ public class EquipoNoMuerto extends JPanel{
 		add(zombi);
 		
 		JLabel lblNewLabel = new JLabel("Zombi");
-		lblNewLabel.setBounds(84, 250, 30, 20);
+		lblNewLabel.setBounds(81, 250, 41, 20);
 		add(lblNewLabel);
 		
 		JSpinner esqueleto = new JSpinner();
@@ -32,7 +32,7 @@ public class EquipoNoMuerto extends JPanel{
 		add(esqueleto);
 		
 		JLabel lblNewLabel_1 = new JLabel("Esqueleto");
-		lblNewLabel_1.setBounds(217, 254, 48, 13);
+		lblNewLabel_1.setBounds(206, 254, 60, 13);
 		add(lblNewLabel_1);
 		
 		JSpinner tumulario = new JSpinner();
@@ -41,7 +41,7 @@ public class EquipoNoMuerto extends JPanel{
 		add(tumulario);
 		
 		JLabel lblNewLabel_2 = new JLabel("Tumulario");
-		lblNewLabel_2.setBounds(371, 254, 48, 13);
+		lblNewLabel_2.setBounds(361, 254, 60, 13);
 		add(lblNewLabel_2);
 		
 		JSpinner necrofago = new JSpinner();
@@ -50,7 +50,7 @@ public class EquipoNoMuerto extends JPanel{
 		add(necrofago);
 		
 		JLabel lblNewLabel_3 = new JLabel("Necrofago");
-		lblNewLabel_3.setBounds(111, 527, 48, 13);
+		lblNewLabel_3.setBounds(100, 527, 65, 13);
 		add(lblNewLabel_3);
 		
 		JSpinner momia = new JSpinner();
@@ -59,7 +59,7 @@ public class EquipoNoMuerto extends JPanel{
 		add(momia);
 		
 		JLabel lblNewLabel_4 = new JLabel("Momia");
-		lblNewLabel_4.setBounds(321, 527, 30, 13);
+		lblNewLabel_4.setBounds(318, 527, 47, 13);
 		add(lblNewLabel_4);
 		
 		JButton btnNewButton = new JButton("Crear");
@@ -71,11 +71,14 @@ public class EquipoNoMuerto extends JPanel{
 				   (int)tumulario.getValue()+
 				   (int)necrofago.getValue()+ 
 				   (int)momia.getValue()>16){
+					JOptionPane.showMessageDialog(ventana,
+							"No puedes tener mas de 16 jugadores en el equipo",
+							"Login fallido",
+							JOptionPane.ERROR_MESSAGE);
+				}else {
+					ventana.irAMenuPrincipal();
 				}
-				JOptionPane.showMessageDialog(ventana,
-						"No puedes tener mas de 16 jugadores en el equipo",
-						"Login fallido",
-						JOptionPane.ERROR_MESSAGE);
+				
 					
 				}
 			});

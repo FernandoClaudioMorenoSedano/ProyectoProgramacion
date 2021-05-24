@@ -23,7 +23,7 @@ public class EquipoElfo extends JPanel{
 		add(lineaElfo);
 		
 		JLabel lblNewLabel = new JLabel("Linea Elfo");
-		lblNewLabel.setBounds(77, 250, 48, 20);
+		lblNewLabel.setBounds(77, 250, 60, 20);
 		add(lblNewLabel);
 		
 		JSpinner lanzadorElfo = new JSpinner();
@@ -32,7 +32,7 @@ public class EquipoElfo extends JPanel{
 		add(lanzadorElfo);
 		
 		JLabel lblNewLabel_1 = new JLabel("Lanzador Elfo");
-		lblNewLabel_1.setBounds(210, 254, 69, 13);
+		lblNewLabel_1.setBounds(194, 254, 85, 13);
 		add(lblNewLabel_1);
 		
 		JSpinner receptorElfo = new JSpinner();
@@ -41,7 +41,7 @@ public class EquipoElfo extends JPanel{
 		add(receptorElfo);
 		
 		JLabel lblNewLabel_2 = new JLabel("Receptor Elfo");
-		lblNewLabel_2.setBounds(364, 254, 69, 13);
+		lblNewLabel_2.setBounds(352, 254, 85, 13);
 		add(lblNewLabel_2);
 		
 		JSpinner bailarinGuerrero = new JSpinner();
@@ -50,7 +50,7 @@ public class EquipoElfo extends JPanel{
 		add(bailarinGuerrero);
 		
 		JLabel lblNewLabel_3 = new JLabel("Bailarin Guerrero");
-		lblNewLabel_3.setBounds(98, 525, 78, 13);
+		lblNewLabel_3.setBounds(84, 525, 103, 13);
 		add(lblNewLabel_3);
 		
 		JSpinner hombreArbol = new JSpinner();
@@ -59,7 +59,7 @@ public class EquipoElfo extends JPanel{
 		add(hombreArbol);
 		
 		JLabel lblNewLabel_4 = new JLabel("Hombre Arbol");
-		lblNewLabel_4.setBounds(304, 525, 69, 13);
+		lblNewLabel_4.setBounds(298, 525, 78, 13);
 		add(lblNewLabel_4);
 		
 		JButton btnNewButton = new JButton("Crear");
@@ -71,11 +71,14 @@ public class EquipoElfo extends JPanel{
 				   (int)receptorElfo.getValue()+
 				   (int)bailarinGuerrero.getValue()+ 
 				   (int)hombreArbol.getValue()>16){
+					JOptionPane.showMessageDialog(ventana,
+							"No puedes tener mas de 16 jugadores en el equipo",
+							"Login fallido",
+							JOptionPane.ERROR_MESSAGE);
+				}else {
+					ventana.irAMenuPrincipal();
 				}
-				JOptionPane.showMessageDialog(ventana,
-						"No puedes tener mas de 16 jugadores en el equipo",
-						"Login fallido",
-						JOptionPane.ERROR_MESSAGE);
+				
 					
 				}
 			});

@@ -19,7 +19,7 @@ public class Ventana extends JFrame{
 	private EquipoOrco equipoOrco;
 	private EquipoCaos equipoCaos;
 	public Ventana() {
-		this.setSize(500,600);
+		this.setSize(500,650);
 		this.setTitle("Blood Bowl");
 		//this.setAlwaysOnTop(true);
 		try {
@@ -68,6 +68,18 @@ public class Ventana extends JFrame{
 		}
 		if(this.creadorDeEquipos!=null) {
 			this.creadorDeEquipos.setVisible(false);
+		}else if(this.equipoHumano!=null){
+			this.equipoHumano.setVisible(false);
+		}else if(this.equipoCaos!=null){
+			this.equipoCaos.setVisible(false);
+		}else if(this.equipoOrco!=null){
+			this.equipoOrco.setVisible(false);
+		}else if(this.equipoEnano!=null){
+			this.equipoEnano.setVisible(false);
+		}else if(this.equipoElfo!=null){
+			this.equipoElfo.setVisible(false);
+		}else if(this.equipoNoMuerto!=null){
+			this.equipoNoMuerto.setVisible(false);
 		}
 		this.setContentPane(this.menuPrincipal);
 		this.menuPrincipal.setVisible(true);

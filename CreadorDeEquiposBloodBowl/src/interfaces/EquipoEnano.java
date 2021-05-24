@@ -23,7 +23,7 @@ public class EquipoEnano extends JPanel{
 		add(barbasLargas);
 		
 		JLabel lblNewLabel = new JLabel("BarbasLargas");
-		lblNewLabel.setBounds(70, 250, 62, 20);
+		lblNewLabel.setBounds(62, 250, 78, 20);
 		add(lblNewLabel);
 		
 		JSpinner blizterEnano = new JSpinner();
@@ -32,7 +32,7 @@ public class EquipoEnano extends JPanel{
 		add(blizterEnano);
 		
 		JLabel lblNewLabel_1 = new JLabel("Blizter Enano");
-		lblNewLabel_1.setBounds(209, 254, 62, 13);
+		lblNewLabel_1.setBounds(202, 254, 78, 13);
 		add(lblNewLabel_1);
 		
 		JSpinner corredorEnano = new JSpinner();
@@ -41,7 +41,7 @@ public class EquipoEnano extends JPanel{
 		add(corredorEnano);
 		
 		JLabel lblNewLabel_2 = new JLabel("Corredor Enano");
-		lblNewLabel_2.setBounds(351, 254, 82, 13);
+		lblNewLabel_2.setBounds(344, 254, 95, 13);
 		add(lblNewLabel_2);
 		
 		JSpinner mataTrolls = new JSpinner();
@@ -50,7 +50,7 @@ public class EquipoEnano extends JPanel{
 		add(mataTrolls);
 		
 		JLabel lblNewLabel_3 = new JLabel("MataTrolls");
-		lblNewLabel_3.setBounds(112, 528, 48, 13);
+		lblNewLabel_3.setBounds(101, 528, 65, 13);
 		add(lblNewLabel_3);
 		
 		JSpinner apisonadora = new JSpinner();
@@ -59,7 +59,7 @@ public class EquipoEnano extends JPanel{
 		add(apisonadora);
 		
 		JLabel lblNewLabel_4 = new JLabel("Apisonadora");
-		lblNewLabel_4.setBounds(307, 528, 57, 13);
+		lblNewLabel_4.setBounds(299, 528, 71, 13);
 		add(lblNewLabel_4);
 		
 		JButton btnNewButton = new JButton("Crear");
@@ -71,11 +71,14 @@ public class EquipoEnano extends JPanel{
 				   (int)corredorEnano.getValue()+
 				   (int)mataTrolls.getValue()+ 
 				   (int)apisonadora.getValue()>16){
+					JOptionPane.showMessageDialog(ventana,
+							"No puedes tener mas de 16 jugadores en el equipo",
+							"Login fallido",
+							JOptionPane.ERROR_MESSAGE);
+				}else {
+					ventana.irAMenuPrincipal();
 				}
-				JOptionPane.showMessageDialog(ventana,
-						"No puedes tener mas de 16 jugadores en el equipo",
-						"Login fallido",
-						JOptionPane.ERROR_MESSAGE);
+				
 					
 				}
 			});

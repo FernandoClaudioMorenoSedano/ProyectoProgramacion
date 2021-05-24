@@ -24,7 +24,7 @@ public class EquipoCaos extends JPanel{
 		add(hombreBestia);
 		
 		JLabel lblNewLabel = new JLabel("Hombre Bestia");
-		lblNewLabel.setBounds(104, 242, 66, 13);
+		lblNewLabel.setBounds(90, 242, 100, 13);
 		add(lblNewLabel);
 		
 		JSpinner guerreroDelCaos = new JSpinner();
@@ -33,7 +33,7 @@ public class EquipoCaos extends JPanel{
 		add(guerreroDelCaos);
 		
 		JLabel lblNewLabel_1 = new JLabel("Guerrero del Caos");
-		lblNewLabel_1.setBounds(321, 242, 83, 13);
+		lblNewLabel_1.setBounds(312, 242, 114, 13);
 		add(lblNewLabel_1);
 		
 		JSpinner minotauro = new JSpinner();
@@ -42,7 +42,7 @@ public class EquipoCaos extends JPanel{
 		add(minotauro);
 		
 		JLabel lblNewLabel_2 = new JLabel("Minotauro");
-		lblNewLabel_2.setBounds(225, 519, 53, 13);
+		lblNewLabel_2.setBounds(225, 519, 67, 13);
 		add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Crear");
@@ -52,11 +52,14 @@ public class EquipoCaos extends JPanel{
 				if((int)hombreBestia.getValue()+
 				   (int)guerreroDelCaos.getValue()+
 				   (int)minotauro.getValue()>16){
+					JOptionPane.showMessageDialog(ventana,
+							"No puedes tener mas de 16 jugadores en el equipo",
+							"Login fallido",
+							JOptionPane.ERROR_MESSAGE);
+				}else {
+					ventana.irAMenuPrincipal();
 				}
-				JOptionPane.showMessageDialog(ventana,
-						"No puedes tener mas de 16 jugadores en el equipo",
-						"Login fallido",
-						JOptionPane.ERROR_MESSAGE);
+				
 					
 				}
 			});
