@@ -83,6 +83,14 @@ public class CreadorDeEquipos extends JPanel{
 		panelInferior.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Siguiente");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				//if(comboRaza = 'HUMANO') {
+					
+				//}
+			}
+		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panelInferior.add(btnNewButton_1);
 		

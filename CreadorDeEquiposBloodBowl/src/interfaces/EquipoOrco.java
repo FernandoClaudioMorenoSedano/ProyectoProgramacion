@@ -12,7 +12,8 @@ import java.awt.event.MouseEvent;
 public class EquipoOrco extends JPanel{
 	private Ventana ventana;
 	private CreadorDeEquipos creadorDeEquipos;
-	public EquipoOrco() {
+	public EquipoOrco(Ventana v) {
+		ventana=v;
 		setLayout(null);
 		
 		JSpinner lineaOrco = new JSpinner();
@@ -89,6 +90,17 @@ public class EquipoOrco extends JPanel{
 			});
 		btnNewButton.setBounds(377, 569, 85, 21);
 		add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Atras");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.irACreadorDeEquipos();
+			}
+		});
+		btnNewButton_1.setBounds(40, 569, 85, 21);
+		add(btnNewButton_1);
+		
 	}
 }
 

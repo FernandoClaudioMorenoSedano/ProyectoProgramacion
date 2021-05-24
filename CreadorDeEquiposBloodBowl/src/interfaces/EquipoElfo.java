@@ -13,7 +13,8 @@ import javax.swing.SpinnerNumberModel;
 public class EquipoElfo extends JPanel{
 	private Ventana ventana;
 	private CreadorDeEquipos creadorDeEquipos;
-	public EquipoElfo() {
+	public EquipoElfo(Ventana v) {
+		ventana=v;
 		setLayout(null);
 		
 		JSpinner lineaElfo = new JSpinner();
@@ -80,6 +81,16 @@ public class EquipoElfo extends JPanel{
 			});
 		btnNewButton.setBounds(377, 569, 85, 21);
 		add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Atras");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.irACreadorDeEquipos();
+			}
+		});
+		btnNewButton_1.setBounds(40, 569, 85, 21);
+		add(btnNewButton_1);
 		
 	}
 }
