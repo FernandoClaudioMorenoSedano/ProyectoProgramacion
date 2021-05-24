@@ -86,9 +86,9 @@ public class CreadorDeEquipos extends JPanel{
 		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				//if(comboRaza = 'HUMANO') {
+				if(comboRaza.getSelectedItem().equals(Razas.HUMANO)) {
 					
-				//}
+				}
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
