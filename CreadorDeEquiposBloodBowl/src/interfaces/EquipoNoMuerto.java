@@ -10,9 +10,10 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
-public class EquipoNoMuertos extends JPanel{
+public class EquipoNoMuerto extends JPanel{
 	private Ventana ventana;
-	public EquipoNoMuertos() {
+	private CreadorDeEquipos creadorDeEquipos;
+	public EquipoNoMuerto() {
 		setLayout(null);
 		
 		JSpinner zombi = new JSpinner();

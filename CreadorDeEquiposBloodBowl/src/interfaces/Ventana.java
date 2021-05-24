@@ -12,6 +12,12 @@ import javax.swing.JPanel;
 public class Ventana extends JFrame{
 	private CreadorDeEquipos creadorDeEquipos;
 	private MenuPrincipal menuPrincipal;
+	private EquipoNoMuerto equipoNoMuerto;
+	private EquipoEnano equipoEnano;
+	private EquipoElfo equipoElfo;
+	private EquipoHumano equipoHumano;
+	private EquipoOrco equipoOrco;
+	private EquipoCaos equipoCaos;
 	public Ventana() {
 		this.setSize(500,600);
 		this.setTitle("Blood Bowl");

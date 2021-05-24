@@ -13,6 +13,7 @@ import javax.swing.SpinnerNumberModel;
 
 public class EquipoHumano extends JPanel{
 	private Ventana ventana;
+	private CreadorDeEquipos creadorDeEquipos;
 	public EquipoHumano() {
 		setLayout(null);
 		

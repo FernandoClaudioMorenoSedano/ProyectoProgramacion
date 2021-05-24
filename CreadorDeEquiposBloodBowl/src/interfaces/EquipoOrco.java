@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
 
 public class EquipoOrco extends JPanel{
 	private Ventana ventana;
+	private CreadorDeEquipos creadorDeEquipos;
 	public EquipoOrco() {
 		setLayout(null);
 		

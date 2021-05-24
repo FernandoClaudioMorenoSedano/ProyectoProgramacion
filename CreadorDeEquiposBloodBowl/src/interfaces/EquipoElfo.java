@@ -12,6 +12,7 @@ import javax.swing.SpinnerNumberModel;
 
 public class EquipoElfo extends JPanel{
 	private Ventana ventana;
+	private CreadorDeEquipos creadorDeEquipos;
 	public EquipoElfo() {
 		setLayout(null);
 		
