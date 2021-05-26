@@ -59,6 +59,7 @@ public class CreadorDeEquipos extends JPanel{
 		panelCentral.add(lblNewLabel_2);
 		
 		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField_1.setBounds(133, 124, 307, 32);
 		panelCentral.add(textField_1);
 		textField_1.setColumns(10);
