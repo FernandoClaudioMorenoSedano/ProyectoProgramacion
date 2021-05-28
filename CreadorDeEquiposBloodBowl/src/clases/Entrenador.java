@@ -1,5 +1,5 @@
 package clases;
 
-public class Entrenador {
+public class Entrenador extends CosasConNombre{
 	private byte numEquipos;
 }
