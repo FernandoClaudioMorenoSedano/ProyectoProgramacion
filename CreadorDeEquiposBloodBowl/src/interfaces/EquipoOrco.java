@@ -5,9 +5,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.SwingConstants;
 
 public class EquipoOrco extends JPanel{
 	private Ventana ventana;
@@ -103,6 +105,42 @@ public class EquipoOrco extends JPanel{
 		});
 		btnNewButton_1.setBounds(40, 569, 85, 21);
 		add(btnNewButton_1);
+		
+		JLabel imagLineaOrco = new JLabel("");
+		imagLineaOrco.setHorizontalAlignment(SwingConstants.CENTER);
+		imagLineaOrco.setBounds(10, 11, 149, 211);
+		imagLineaOrco.setIcon(new ImageIcon("LineaOrco.jpg"));
+		add(imagLineaOrco);
+		
+		JLabel imagBlizterOrco = new JLabel("");
+		imagBlizterOrco.setHorizontalAlignment(SwingConstants.CENTER);
+		imagBlizterOrco.setBounds(169, 11, 149, 211);
+		imagBlizterOrco.setIcon(new ImageIcon("BlizterOrco.jpg"));
+		add(imagBlizterOrco);
+		
+		JLabel imagLanzadorOrco = new JLabel("");
+		imagLanzadorOrco.setHorizontalAlignment(SwingConstants.CENTER);
+		imagLanzadorOrco.setBounds(328, 11, 149, 211);
+		imagLanzadorOrco.setIcon(new ImageIcon("LanzadorOrco.jpg"));
+		add(imagLanzadorOrco);
+		
+		JLabel imagOrcoNegro = new JLabel("");
+		imagOrcoNegro.setHorizontalAlignment(SwingConstants.CENTER);
+		imagOrcoNegro.setBounds(10, 294, 149, 211);
+		imagOrcoNegro.setIcon(new ImageIcon("OrcoNegro.jpg"));
+		add(imagOrcoNegro);
+		
+		JLabel imagTroll = new JLabel("");
+		imagTroll.setHorizontalAlignment(SwingConstants.CENTER);
+		imagTroll.setBounds(169, 294, 149, 211);
+		imagTroll.setIcon(new ImageIcon("Troll.jpg"));
+		add(imagTroll);
+		
+		JLabel imagGoblin = new JLabel("");
+		imagGoblin.setHorizontalAlignment(SwingConstants.CENTER);
+		imagGoblin.setBounds(328, 378, 149, 127);
+		imagGoblin.setIcon(new ImageIcon("Goblin.jpg"));
+		add(imagGoblin);
 		
 	}
 }

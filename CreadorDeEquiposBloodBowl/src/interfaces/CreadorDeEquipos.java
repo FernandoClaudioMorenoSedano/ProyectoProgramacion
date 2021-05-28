@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
@@ -18,8 +19,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class CreadorDeEquipos extends JPanel{
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField nombre;
+	private JTextField estadio;
 	private Ventana ventana;
 	
 	public CreadorDeEquipos(Ventana v) {
@@ -46,11 +47,11 @@ public class CreadorDeEquipos extends JPanel{
 		lblNewLabel_1.setBounds(25, 26, 65, 18);
 		panelCentral.add(lblNewLabel_1);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textField.setBounds(133, 43, 307, 32);
-		panelCentral.add(textField);
-		textField.setColumns(10);
+		nombre = new JTextField();
+		nombre.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		nombre.setBounds(133, 43, 307, 32);
+		panelCentral.add(nombre);
+		nombre.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Nombre del Equipo");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -58,11 +59,11 @@ public class CreadorDeEquipos extends JPanel{
 		lblNewLabel_2.setBounds(208, 26, 156, 18);
 		panelCentral.add(lblNewLabel_2);
 		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textField_1.setBounds(133, 124, 307, 32);
-		panelCentral.add(textField_1);
-		textField_1.setColumns(10);
+		estadio = new JTextField();
+		estadio.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		estadio.setBounds(133, 124, 307, 32);
+		panelCentral.add(estadio);
+		estadio.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("Nombre del Estadio del Equipo");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -83,11 +84,17 @@ public class CreadorDeEquipos extends JPanel{
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panelInferior.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Siguiente");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
+		JButton btnSiguiente = new JButton("Siguiente");
+		btnSiguiente.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(comboRaza.getSelectedItem().equals(Razas.HUMANO)) {
+				if(nombre.getText().isEmpty()||estadio.getText().isEmpty()){
+					JOptionPane.showMessageDialog(ventana,
+							"Tienes que rellenar tanto el nombre del equipo como el del estadio",
+							"Login fallido",
+							JOptionPane.ERROR_MESSAGE);	
+				}else
+					if(comboRaza.getSelectedItem().equals(Razas.HUMANO)) {
 					ventana.irAEquipoHumano();
 				}else if(comboRaza.getSelectedItem().equals(Razas.ORCO)) {
 					ventana.irAEquipoOrco();
@@ -100,10 +107,11 @@ public class CreadorDeEquipos extends JPanel{
 				}else if(comboRaza.getSelectedItem().equals(Razas.NOMUERTO)) {
 					ventana.irAEquipoNoMuerto();
 				}
+				
 			}
 		});
-		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		panelInferior.add(btnNewButton_1);
+		btnSiguiente.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		panelInferior.add(btnSiguiente);
 		
 		
 	}

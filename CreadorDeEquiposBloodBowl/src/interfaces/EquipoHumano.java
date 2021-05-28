@@ -3,6 +3,7 @@ package interfaces;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 
+import java.awt.BorderLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -11,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 public class EquipoHumano extends JPanel{
 	private Ventana ventana;
@@ -96,5 +98,31 @@ public class EquipoHumano extends JPanel{
 		});
 		btnNewButton_1.setBounds(40, 569, 85, 21);
 		add(btnNewButton_1);
+		
+		JLabel imagLineaHumano = new JLabel("");
+		imagLineaHumano.setHorizontalAlignment(SwingConstants.CENTER);
+		imagLineaHumano.setBounds(10, 10, 149, 211);
+		imagLineaHumano.setIcon(new ImageIcon("LineaHumano.jpg"));
+		add(imagLineaHumano);
+		
+		JLabel imagBlizterHumano = new JLabel("");
+		imagBlizterHumano.setBounds(163, 0, 155, 221);
+		imagBlizterHumano.setIcon(new ImageIcon("BlizterHumano.jpg"));
+		add(imagBlizterHumano);
+		
+		JLabel imagLanzadorHumano = new JLabel("");
+		imagLanzadorHumano.setBounds(328, 10, 149, 211);
+		imagLanzadorHumano.setIcon(new ImageIcon("LanzadorHumano.jpg"));
+		add(imagLanzadorHumano);
+		
+		JLabel imagReceptorHumano = new JLabel("");
+		imagReceptorHumano.setBounds(68, 280, 131, 211);
+		imagReceptorHumano.setIcon(new ImageIcon("ReceptorHumano.jpg"));
+		add(imagReceptorHumano);
+		
+		JLabel imagOgro = new JLabel("");
+		imagOgro.setBounds(245, 277, 168, 221);
+		imagOgro.setIcon(new ImageIcon("Ogro.jpg"));
+		add(imagOgro);
 	}
 }

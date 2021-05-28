@@ -3,12 +3,14 @@ package interfaces;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.SwingConstants;
 
 public class EquipoElfo extends JPanel{
 	private Ventana ventana;
@@ -19,11 +21,11 @@ public class EquipoElfo extends JPanel{
 		
 		JSpinner lineaElfo = new JSpinner();
 		lineaElfo.setModel(new SpinnerNumberModel(0, 0, 16, 1));
-		lineaElfo.setBounds(84, 231, 30, 20);
+		lineaElfo.setBounds(77, 231, 30, 20);
 		add(lineaElfo);
 		
 		JLabel lblNewLabel = new JLabel("Linea Elfo");
-		lblNewLabel.setBounds(77, 250, 60, 20);
+		lblNewLabel.setBounds(65, 250, 60, 20);
 		add(lblNewLabel);
 		
 		JSpinner lanzadorElfo = new JSpinner();
@@ -37,16 +39,16 @@ public class EquipoElfo extends JPanel{
 		
 		JSpinner receptorElfo = new JSpinner();
 		receptorElfo.setModel(new SpinnerNumberModel(0, 0, 4, 1));
-		receptorElfo.setBounds(377, 231, 30, 20);
+		receptorElfo.setBounds(385, 231, 30, 20);
 		add(receptorElfo);
 		
 		JLabel lblNewLabel_2 = new JLabel("Receptor Elfo");
-		lblNewLabel_2.setBounds(352, 254, 85, 13);
+		lblNewLabel_2.setBounds(366, 254, 85, 13);
 		add(lblNewLabel_2);
 		
 		JSpinner bailarinGuerrero = new JSpinner();
 		bailarinGuerrero.setModel(new SpinnerNumberModel(0, 0, 2, 1));
-		bailarinGuerrero.setBounds(118, 506, 30, 20);
+		bailarinGuerrero.setBounds(110, 506, 30, 20);
 		add(bailarinGuerrero);
 		
 		JLabel lblNewLabel_3 = new JLabel("Bailarin Guerrero");
@@ -95,5 +97,34 @@ public class EquipoElfo extends JPanel{
 		btnNewButton_1.setBounds(40, 569, 85, 21);
 		add(btnNewButton_1);
 		
+		JLabel imagLineaElfo = new JLabel("");
+		imagLineaElfo.setHorizontalAlignment(SwingConstants.CENTER);
+		imagLineaElfo.setBounds(10, 11, 149, 207);
+		imagLineaElfo.setIcon(new ImageIcon("LineaElfo.jpg"));
+		add(imagLineaElfo);
+		
+		JLabel imagLanzadorElfo = new JLabel("");
+		imagLanzadorElfo.setHorizontalAlignment(SwingConstants.CENTER);
+		imagLanzadorElfo.setBounds(169, 11, 149, 207);
+		imagLanzadorElfo.setIcon(new ImageIcon("LanzadorElfo.jpg"));
+		add(imagLanzadorElfo);
+		
+		JLabel imagReceptorElfo = new JLabel("");
+		imagReceptorElfo.setHorizontalAlignment(SwingConstants.CENTER);
+		imagReceptorElfo.setBounds(328, 10, 140, 211);
+		imagReceptorElfo.setIcon(new ImageIcon("ReceptorElfo.jpg"));
+		add(imagReceptorElfo);
+		
+		JLabel imagBailarinGuerrero = new JLabel("");
+		imagBailarinGuerrero.setHorizontalAlignment(SwingConstants.CENTER);
+		imagBailarinGuerrero.setBounds(56, 285, 138, 211);
+		imagBailarinGuerrero.setIcon(new ImageIcon("BailarinGuerrero.jpg"));
+		add(imagBailarinGuerrero);
+		
+		JLabel imagHombreArbol = new JLabel("");
+		imagHombreArbol.setHorizontalAlignment(SwingConstants.CENTER);
+		imagHombreArbol.setBounds(247, 285, 174, 211);
+		imagHombreArbol.setIcon(new ImageIcon("HombreArbol.jpg"));
+		add(imagHombreArbol);
 	}
 }
