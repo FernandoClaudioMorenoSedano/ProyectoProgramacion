@@ -24,48 +24,48 @@ public class EquipoEnano extends JPanel{
 		barbasLargas.setBounds(69, 176, 30, 20);
 		add(barbasLargas);
 		
-		JLabel lblNewLabel = new JLabel("BarbasLargas");
-		lblNewLabel.setBounds(47, 201, 78, 20);
-		add(lblNewLabel);
+		JLabel lblBarbasLargas = new JLabel("BarbasLargas");
+		lblBarbasLargas.setBounds(47, 201, 78, 20);
+		add(lblBarbasLargas);
 		
 		JSpinner blizterEnano = new JSpinner();
 		blizterEnano.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		blizterEnano.setBounds(230, 176, 30, 20);
 		add(blizterEnano);
 		
-		JLabel lblNewLabel_1 = new JLabel("Blizter Enano");
-		lblNewLabel_1.setBounds(210, 205, 78, 13);
-		add(lblNewLabel_1);
+		JLabel lblBlizterEnano = new JLabel("Blizter Enano");
+		lblBlizterEnano.setBounds(210, 205, 78, 13);
+		add(lblBlizterEnano);
 		
 		JSpinner corredorEnano = new JSpinner();
 		corredorEnano.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		corredorEnano.setBounds(377, 176, 30, 20);
 		add(corredorEnano);
 		
-		JLabel lblNewLabel_2 = new JLabel("Corredor Enano");
-		lblNewLabel_2.setBounds(353, 205, 95, 13);
-		add(lblNewLabel_2);
+		JLabel lblCorredorEnano = new JLabel("Corredor Enano");
+		lblCorredorEnano.setBounds(353, 205, 95, 13);
+		add(lblCorredorEnano);
 		
 		JSpinner mataTrolls = new JSpinner();
 		mataTrolls.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		mataTrolls.setBounds(95, 473, 30, 20);
 		add(mataTrolls);
 		
-		JLabel lblNewLabel_3 = new JLabel("MataTrolls");
-		lblNewLabel_3.setBounds(90, 503, 65, 13);
-		add(lblNewLabel_3);
+		JLabel lblMataTrolls = new JLabel("MataTrolls");
+		lblMataTrolls.setBounds(90, 503, 65, 13);
+		add(lblMataTrolls);
 		
 		JSpinner apisonadora = new JSpinner();
 		apisonadora.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		apisonadora.setBounds(340, 473, 30, 20);
 		add(apisonadora);
 		
-		JLabel lblNewLabel_4 = new JLabel("Apisonadora");
-		lblNewLabel_4.setBounds(320, 503, 71, 13);
-		add(lblNewLabel_4);
+		JLabel lblApisonadora = new JLabel("Apisonadora");
+		lblApisonadora.setBounds(320, 503, 71, 13);
+		add(lblApisonadora);
 		
-		JButton btnNewButton = new JButton("Crear");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton crearEnano = new JButton("Crear");
+		crearEnano.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if((int)barbasLargas.getValue()+
@@ -84,18 +84,18 @@ public class EquipoEnano extends JPanel{
 					
 				}
 			});
-		btnNewButton.setBounds(377, 569, 85, 21);
-		add(btnNewButton);
+		crearEnano.setBounds(377, 569, 85, 21);
+		add(crearEnano);
 		
-		JButton btnNewButton_1 = new JButton("Atras");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
+		JButton atrasEnano = new JButton("Atras");
+		atrasEnano.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ventana.irACreadorDeEquipos();
 			}
 		});
-		btnNewButton_1.setBounds(40, 569, 85, 21);
-		add(btnNewButton_1);
+		atrasEnano.setBounds(40, 569, 85, 21);
+		add(atrasEnano);
 		
 		JLabel imagBarbasLargas = new JLabel("");
 		imagBarbasLargas.setHorizontalAlignment(SwingConstants.CENTER);

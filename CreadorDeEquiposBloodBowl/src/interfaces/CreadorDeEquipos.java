@@ -22,15 +22,16 @@ public class CreadorDeEquipos extends JPanel{
 	private JTextField nombre;
 	private JTextField estadio;
 	private Ventana ventana;
+	private JTextField entrenador;
 	
 	public CreadorDeEquipos(Ventana v) {
 		ventana=v;
 		setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblNewLabel = new JLabel("Creador de Equipos");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		add(lblNewLabel, BorderLayout.NORTH);
+		JLabel lblCreadorDeEquipos = new JLabel("Creador de Equipos");
+		lblCreadorDeEquipos.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblCreadorDeEquipos.setHorizontalAlignment(SwingConstants.CENTER);
+		add(lblCreadorDeEquipos, BorderLayout.NORTH);
 	
 		JPanel panelCentral = new JPanel();
 		add(panelCentral, BorderLayout.CENTER);
@@ -41,48 +42,60 @@ public class CreadorDeEquipos extends JPanel{
 		comboRaza.setBounds(10, 43, 99, 23);
 		panelCentral.add(comboRaza);
 		
-		JLabel lblNewLabel_1 = new JLabel("Raza");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1.setBounds(25, 26, 65, 18);
-		panelCentral.add(lblNewLabel_1);
+		JLabel lblRaza = new JLabel("Raza");
+		lblRaza.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRaza.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRaza.setBounds(25, 26, 65, 18);
+		panelCentral.add(lblRaza);
 		
 		nombre = new JTextField();
 		nombre.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		nombre.setBounds(133, 43, 307, 32);
+		nombre.setBounds(133, 93, 307, 32);
 		panelCentral.add(nombre);
 		nombre.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Nombre del Equipo");
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2.setBounds(208, 26, 156, 18);
-		panelCentral.add(lblNewLabel_2);
+		JLabel lblNombreEquipo = new JLabel("Nombre del Equipo");
+		lblNombreEquipo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNombreEquipo.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNombreEquipo.setBounds(211, 74, 156, 18);
+		panelCentral.add(lblNombreEquipo);
 		
 		estadio = new JTextField();
 		estadio.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		estadio.setBounds(133, 124, 307, 32);
+		estadio.setBounds(133, 153, 307, 32);
 		panelCentral.add(estadio);
 		estadio.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Nombre del Estadio del Equipo");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setBounds(165, 106, 233, 18);
-		panelCentral.add(lblNewLabel_3);
+		JLabel lblNombreEstadio = new JLabel("Nombre del Estadio del Equipo");
+		lblNombreEstadio.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNombreEstadio.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNombreEstadio.setBounds(167, 135, 233, 18);
+		panelCentral.add(lblNombreEstadio);
+		
+		entrenador = new JTextField();
+		entrenador.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		entrenador.setColumns(10);
+		entrenador.setBounds(133, 28, 307, 32);
+		panelCentral.add(entrenador);
+		
+		JLabel lblNombreEntrenador = new JLabel("Nombre del Entrenador");
+		lblNombreEntrenador.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNombreEntrenador.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNombreEntrenador.setBounds(200, 10, 167, 18);
+		panelCentral.add(lblNombreEntrenador);
 		
 		JPanel panelInferior = new JPanel();
 		add(panelInferior, BorderLayout.SOUTH);
 		
-		JButton btnNewButton = new JButton("Atras");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ventana.irAMenuPrincipal();
 			}
 		});
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		panelInferior.add(btnNewButton);
+		btnAtras.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		panelInferior.add(btnAtras);
 		
 		JButton btnSiguiente = new JButton("Siguiente");
 		btnSiguiente.addMouseListener(new MouseAdapter() {

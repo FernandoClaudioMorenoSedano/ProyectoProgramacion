@@ -23,48 +23,48 @@ public class EquipoNoMuerto extends JPanel{
 		zombi.setBounds(71, 215, 30, 20);
 		add(zombi);
 		
-		JLabel lblNewLabel = new JLabel("Zombi");
-		lblNewLabel.setBounds(70, 240, 41, 20);
-		add(lblNewLabel);
+		JLabel lblZombi = new JLabel("Zombi");
+		lblZombi.setBounds(70, 240, 41, 20);
+		add(lblZombi);
 		
 		JSpinner esqueleto = new JSpinner();
 		esqueleto.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		esqueleto.setBounds(223, 215, 30, 20);
 		add(esqueleto);
 		
-		JLabel lblNewLabel_1 = new JLabel("Esqueleto");
-		lblNewLabel_1.setBounds(211, 240, 60, 13);
-		add(lblNewLabel_1);
+		JLabel lblEsqueleto = new JLabel("Esqueleto");
+		lblEsqueleto.setBounds(211, 240, 60, 13);
+		add(lblEsqueleto);
 		
 		JSpinner tumulario = new JSpinner();
 		tumulario.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		tumulario.setBounds(396, 215, 30, 20);
 		add(tumulario);
 		
-		JLabel lblNewLabel_2 = new JLabel("Tumulario");
-		lblNewLabel_2.setBounds(383, 240, 60, 13);
-		add(lblNewLabel_2);
+		JLabel lblTumulario = new JLabel("Tumulario");
+		lblTumulario.setBounds(383, 240, 60, 13);
+		add(lblTumulario);
 		
 		JSpinner necrofago = new JSpinner();
 		necrofago.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		necrofago.setBounds(84, 506, 30, 20);
 		add(necrofago);
 		
-		JLabel lblNewLabel_3 = new JLabel("Necrofago");
-		lblNewLabel_3.setBounds(71, 527, 65, 13);
-		add(lblNewLabel_3);
+		JLabel lblNecrofago = new JLabel("Necrofago");
+		lblNecrofago.setBounds(71, 527, 65, 13);
+		add(lblNecrofago);
 		
 		JSpinner momia = new JSpinner();
 		momia.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		momia.setBounds(335, 506, 30, 20);
 		add(momia);
 		
-		JLabel lblNewLabel_4 = new JLabel("Momia");
-		lblNewLabel_4.setBounds(332, 527, 47, 13);
-		add(lblNewLabel_4);
+		JLabel lblMomia = new JLabel("Momia");
+		lblMomia.setBounds(332, 527, 47, 13);
+		add(lblMomia);
 		
-		JButton btnNewButton = new JButton("Crear");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton crearNoMuerto = new JButton("Crear");
+		crearNoMuerto.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if((int)zombi.getValue()+
@@ -83,18 +83,18 @@ public class EquipoNoMuerto extends JPanel{
 					
 				}
 			});
-		btnNewButton.setBounds(377, 569, 85, 21);
-		add(btnNewButton);
+		crearNoMuerto.setBounds(377, 569, 85, 21);
+		add(crearNoMuerto);
 		
-		JButton btnNewButton_1 = new JButton("Atras");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
+		JButton atrasNoMuerto = new JButton("Atras");
+		atrasNoMuerto.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ventana.irACreadorDeEquipos();
 			}
 		});
-		btnNewButton_1.setBounds(40, 569, 85, 21);
-		add(btnNewButton_1);
+		atrasNoMuerto.setBounds(40, 569, 85, 21);
+		add(atrasNoMuerto);
 		
 		JLabel imagZombi = new JLabel("");
 		imagZombi.setBounds(10, 10, 149, 195);

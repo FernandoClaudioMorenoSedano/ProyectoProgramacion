@@ -24,48 +24,48 @@ public class EquipoElfo extends JPanel{
 		lineaElfo.setBounds(77, 231, 30, 20);
 		add(lineaElfo);
 		
-		JLabel lblNewLabel = new JLabel("Linea Elfo");
-		lblNewLabel.setBounds(65, 250, 60, 20);
-		add(lblNewLabel);
+		JLabel lblLineaElfo = new JLabel("Linea Elfo");
+		lblLineaElfo.setBounds(65, 250, 60, 20);
+		add(lblLineaElfo);
 		
 		JSpinner lanzadorElfo = new JSpinner();
 		lanzadorElfo.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		lanzadorElfo.setBounds(222, 231, 30, 20);
 		add(lanzadorElfo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Lanzador Elfo");
-		lblNewLabel_1.setBounds(194, 254, 85, 13);
-		add(lblNewLabel_1);
+		JLabel lblLanzadorElfo = new JLabel("Lanzador Elfo");
+		lblLanzadorElfo.setBounds(194, 254, 85, 13);
+		add(lblLanzadorElfo);
 		
 		JSpinner receptorElfo = new JSpinner();
 		receptorElfo.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		receptorElfo.setBounds(385, 231, 30, 20);
 		add(receptorElfo);
 		
-		JLabel lblNewLabel_2 = new JLabel("Receptor Elfo");
-		lblNewLabel_2.setBounds(366, 254, 85, 13);
-		add(lblNewLabel_2);
+		JLabel lblReceptorElfo = new JLabel("Receptor Elfo");
+		lblReceptorElfo.setBounds(366, 254, 85, 13);
+		add(lblReceptorElfo);
 		
 		JSpinner bailarinGuerrero = new JSpinner();
 		bailarinGuerrero.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		bailarinGuerrero.setBounds(110, 506, 30, 20);
 		add(bailarinGuerrero);
 		
-		JLabel lblNewLabel_3 = new JLabel("Bailarin Guerrero");
-		lblNewLabel_3.setBounds(84, 525, 103, 13);
-		add(lblNewLabel_3);
+		JLabel lblBailarinGuerrero = new JLabel("Bailarin Guerrero");
+		lblBailarinGuerrero.setBounds(84, 525, 103, 13);
+		add(lblBailarinGuerrero);
 		
 		JSpinner hombreArbol = new JSpinner();
 		hombreArbol.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		hombreArbol.setBounds(321, 506, 30, 20);
 		add(hombreArbol);
 		
-		JLabel lblNewLabel_4 = new JLabel("Hombre Arbol");
-		lblNewLabel_4.setBounds(298, 525, 78, 13);
-		add(lblNewLabel_4);
+		JLabel lblHombreArbol = new JLabel("Hombre Arbol");
+		lblHombreArbol.setBounds(298, 525, 78, 13);
+		add(lblHombreArbol);
 		
-		JButton btnNewButton = new JButton("Crear");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton crearElfo = new JButton("Crear");
+		crearElfo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if((int)lineaElfo.getValue()+
@@ -84,18 +84,18 @@ public class EquipoElfo extends JPanel{
 					
 				}
 			});
-		btnNewButton.setBounds(377, 569, 85, 21);
-		add(btnNewButton);
+		crearElfo.setBounds(377, 569, 85, 21);
+		add(crearElfo);
 		
-		JButton btnNewButton_1 = new JButton("Atras");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
+		JButton atrasElfo = new JButton("Atras");
+		atrasElfo.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ventana.irACreadorDeEquipos();
 			}
 		});
-		btnNewButton_1.setBounds(40, 569, 85, 21);
-		add(btnNewButton_1);
+		atrasElfo.setBounds(40, 569, 85, 21);
+		add(atrasElfo);
 		
 		JLabel imagLineaElfo = new JLabel("");
 		imagLineaElfo.setHorizontalAlignment(SwingConstants.CENTER);

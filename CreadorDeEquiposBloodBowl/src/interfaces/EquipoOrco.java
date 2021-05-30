@@ -23,57 +23,57 @@ public class EquipoOrco extends JPanel{
 		lineaOrco.setBounds(60, 232, 30, 20);
 		add(lineaOrco);
 		
-		JLabel lblNewLabel = new JLabel("Linea Orco");
-		lblNewLabel.setBounds(45, 248, 69, 20);
-		add(lblNewLabel);
+		JLabel lblLineaOrco = new JLabel("Linea Orco");
+		lblLineaOrco.setBounds(45, 248, 69, 20);
+		add(lblLineaOrco);
 		
 		JSpinner blizterOrco = new JSpinner();
 		blizterOrco.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		blizterOrco.setBounds(232, 232, 30, 20);
 		add(blizterOrco);
 		
-		JLabel lblNewLabel_1 = new JLabel("Blizter Orco");
-		lblNewLabel_1.setBounds(214, 252, 69, 13);
-		add(lblNewLabel_1);
+		JLabel lblBlizterOrco = new JLabel("Blizter Orco");
+		lblBlizterOrco.setBounds(214, 252, 69, 13);
+		add(lblBlizterOrco);
 		
 		JSpinner lanzadorOrco = new JSpinner();
 		lanzadorOrco.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		lanzadorOrco.setBounds(377, 232, 30, 20);
 		add(lanzadorOrco);
 		
-		JLabel lblNewLabel_2 = new JLabel("Lanzador Orco");
-		lblNewLabel_2.setBounds(354, 252, 85, 13);
-		add(lblNewLabel_2);
+		JLabel lblLanzadorOrco = new JLabel("Lanzador Orco");
+		lblLanzadorOrco.setBounds(354, 252, 85, 13);
+		add(lblLanzadorOrco);
 		
 		JSpinner orcoNegro = new JSpinner();
 		orcoNegro.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		orcoNegro.setBounds(60, 515, 30, 20);
 		add(orcoNegro);
 		
-		JLabel lblNewLabel_3 = new JLabel("Orco Negro");
-		lblNewLabel_3.setBounds(45, 534, 69, 20);
-		add(lblNewLabel_3);
+		JLabel lblOrcoNegro = new JLabel("Orco Negro");
+		lblOrcoNegro.setBounds(45, 534, 69, 20);
+		add(lblOrcoNegro);
 		
 		JSpinner troll = new JSpinner();
 		troll.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		troll.setBounds(232, 515, 30, 20);
 		add(troll);
 		
-		JLabel lblNewLabel_4 = new JLabel("Troll");
-		lblNewLabel_4.setBounds(232, 534, 30, 13);
-		add(lblNewLabel_4);
+		JLabel lblTroll = new JLabel("Troll");
+		lblTroll.setBounds(232, 534, 30, 13);
+		add(lblTroll);
 		
 		JSpinner goblin = new JSpinner();
 		goblin.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		goblin.setBounds(377, 515, 30, 20);
 		add(goblin);
 		
-		JLabel lblNewLabel_5 = new JLabel("Goblin");
-		lblNewLabel_5.setBounds(373, 538, 42, 13);
-		add(lblNewLabel_5);
+		JLabel lblGoblin = new JLabel("Goblin");
+		lblGoblin.setBounds(373, 538, 42, 13);
+		add(lblGoblin);
 		
-		JButton btnNewButton = new JButton("Crear");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton crearOrco = new JButton("Crear");
+		crearOrco.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if((int)lineaOrco.getValue()+
@@ -93,18 +93,18 @@ public class EquipoOrco extends JPanel{
 					
 				}
 			});
-		btnNewButton.setBounds(377, 569, 85, 21);
-		add(btnNewButton);
+		crearOrco.setBounds(377, 569, 85, 21);
+		add(crearOrco);
 		
-		JButton btnNewButton_1 = new JButton("Atras");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
+		JButton atrasOrco = new JButton("Atras");
+		atrasOrco.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ventana.irACreadorDeEquipos();
 			}
 		});
-		btnNewButton_1.setBounds(40, 569, 85, 21);
-		add(btnNewButton_1);
+		atrasOrco.setBounds(40, 569, 85, 21);
+		add(atrasOrco);
 		
 		JLabel imagLineaOrco = new JLabel("");
 		imagLineaOrco.setHorizontalAlignment(SwingConstants.CENTER);

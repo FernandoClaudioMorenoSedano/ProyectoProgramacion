@@ -24,30 +24,30 @@ public class EquipoCaos extends JPanel{
 		hombreBestia.setBounds(68, 225, 30, 20);
 		add(hombreBestia);
 		
-		JLabel lblNewLabel = new JLabel("Hombre Bestia");
-		lblNewLabel.setBounds(54, 248, 100, 13);
-		add(lblNewLabel);
+		JLabel lblHombreBestia = new JLabel("Hombre Bestia");
+		lblHombreBestia.setBounds(54, 248, 100, 13);
+		add(lblHombreBestia);
 		
 		JSpinner guerreroDelCaos = new JSpinner();
 		guerreroDelCaos.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		guerreroDelCaos.setBounds(68, 503, 30, 20);
 		add(guerreroDelCaos);
 		
-		JLabel lblNewLabel_1 = new JLabel("Guerrero del Caos");
-		lblNewLabel_1.setBounds(40, 528, 114, 13);
-		add(lblNewLabel_1);
+		JLabel lblGuerreroDelCaos = new JLabel("Guerrero del Caos");
+		lblGuerreroDelCaos.setBounds(40, 528, 114, 13);
+		add(lblGuerreroDelCaos);
 		
 		JSpinner minotauro = new JSpinner();
 		minotauro.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		minotauro.setBounds(315, 503, 30, 20);
 		add(minotauro);
 		
-		JLabel lblNewLabel_2 = new JLabel("Minotauro");
-		lblNewLabel_2.setBounds(305, 528, 67, 13);
-		add(lblNewLabel_2);
+		JLabel lblMinotauro = new JLabel("Minotauro");
+		lblMinotauro.setBounds(305, 528, 67, 13);
+		add(lblMinotauro);
 		
-		JButton btnNewButton = new JButton("Crear");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton crearCaos = new JButton("Crear");
+		crearCaos.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if((int)hombreBestia.getValue()+
@@ -64,18 +64,18 @@ public class EquipoCaos extends JPanel{
 					
 				}
 			});
-		btnNewButton.setBounds(377, 569, 85, 21);
-		add(btnNewButton);
+		crearCaos.setBounds(377, 569, 85, 21);
+		add(crearCaos);
 		
-		JButton btnNewButton_1 = new JButton("Atras");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
+		JButton atrasCaos = new JButton("Atras");
+		atrasCaos.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				ventana.irACreadorDeEquipos();
 			}
 		});
-		btnNewButton_1.setBounds(40, 569, 85, 21);
-		add(btnNewButton_1);
+		atrasCaos.setBounds(40, 569, 85, 21);
+		add(atrasCaos);
 		
 		JLabel imagHombreBestia = new JLabel("");
 		imagHombreBestia.setBounds(10, 10, 141, 211);
