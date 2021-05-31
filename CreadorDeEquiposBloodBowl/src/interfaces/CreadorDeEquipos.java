@@ -103,7 +103,7 @@ public class CreadorDeEquipos extends JPanel{
 			public void mouseClicked(MouseEvent e) {
 				if(nombre.getText().isEmpty()||estadio.getText().isEmpty()||entrenador.getText().isEmpty()){
 					JOptionPane.showMessageDialog(ventana,
-							"Tienes que rellenar tanto el nombre del equipo como el del estadio",
+							"Tienes que rellenar tanto el nombre del entrenador como el de equipo y el del estadio",
 							"Login fallido",
 							JOptionPane.ERROR_MESSAGE);	
 				}else
