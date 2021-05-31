@@ -32,7 +32,7 @@ public class CreadorDeEquipos extends JPanel{
 		lblCreadorDeEquipos.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblCreadorDeEquipos.setHorizontalAlignment(SwingConstants.CENTER);
 		add(lblCreadorDeEquipos, BorderLayout.NORTH);
-	
+		
 		JPanel panelCentral = new JPanel();
 		add(panelCentral, BorderLayout.CENTER);
 		panelCentral.setLayout(null);
