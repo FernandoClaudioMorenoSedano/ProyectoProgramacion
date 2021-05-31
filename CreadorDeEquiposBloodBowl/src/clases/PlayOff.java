@@ -2,6 +2,6 @@ package clases;
 
 import java.util.ArrayList;
 
-public class PlayOff extends CosasConNombre{
+public class PlayOff {
 	private ArrayList<Ronda> rondas;
 }
