@@ -9,5 +9,4 @@ public class Equipo extends CosasConNombre {
 	private Razas raza;
 	private ArrayList<Jugador> jugador;
 	private String nombreEstadio;
-	private short dineroActual;
 }

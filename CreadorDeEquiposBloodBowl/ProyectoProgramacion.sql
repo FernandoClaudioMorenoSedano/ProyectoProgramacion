@@ -1,3 +1,5 @@
+use proyectoprogramacion;
+
 create table Entrenador(
 	nombre varchar(30) primary key,
     numeroDeEquipos int(2)
@@ -7,8 +9,7 @@ create table Equipo(
 	nombre varchar(30) primary key,
     nombreEntrenador varchar(30) references Entrenador(nombre),
     raza varchar(30),
-    nombreEstadio varchar(30),
-    dineroActual int(10)
+    nombreEstadio varchar(30)
 );
 
 create table Jugador(
@@ -18,7 +19,6 @@ create table Jugador(
     fuerza int(2),
     agilidad int(2),
     armadura int(2),
-    valor int(10),
     numMaxPorEquipo int(2)
 );
 
