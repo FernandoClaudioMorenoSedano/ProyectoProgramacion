@@ -12,6 +12,11 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
 
+/**
+ * Interfaz que permite seleccionar a los jugadores de tu equipo si este es de 
+ * la raza de los Humanos
+ * @author Fernando
+ */
 public class EquipoHumano extends JPanel{
 	private Ventana ventana;
 	private CreadorDeEquipos creadorDeEquipos;
@@ -19,6 +24,7 @@ public class EquipoHumano extends JPanel{
 		ventana=v;
 		setLayout(null);
 		
+//Este JSpiner permite seleccionar cuantos Lineas Humanos habra en tu equipo(entre 0 y 16)		
 		final JSpinner lineaHumano = new JSpinner();
 		lineaHumano.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		lineaHumano.setBounds(84, 231, 30, 20);
@@ -27,7 +33,8 @@ public class EquipoHumano extends JPanel{
 		JLabel lblLineaHumano = new JLabel("Linea Humano");
 		lblLineaHumano.setBounds(58, 250, 81, 20);
 		add(lblLineaHumano);
-		
+
+//Este JSpiner permite seleccionar cuantos Blizters Humanos habra en tu equipo(entre 0 y 4)
 		final JSpinner blizterHumano = new JSpinner();
 		blizterHumano.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		blizterHumano.setBounds(222, 231, 30, 20);
@@ -36,7 +43,8 @@ public class EquipoHumano extends JPanel{
 		JLabel lblBlizterHumano = new JLabel("Blizter Humano");
 		lblBlizterHumano.setBounds(197, 254, 96, 13);
 		add(lblBlizterHumano);
-		
+	
+//Este JSpiner permite seleccionar cuantos Lanzadores Humanos habra en tu equipo(entre 0 y 2)		
 		final JSpinner lanzadorHumano = new JSpinner();
 		lanzadorHumano.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		lanzadorHumano.setBounds(377, 231, 30, 20);
@@ -46,6 +54,7 @@ public class EquipoHumano extends JPanel{
 		lblLanzadorHumano.setBounds(337, 254, 115, 13);
 		add(lblLanzadorHumano);
 		
+//Este JSpiner permite seleccionar cuantos Receptores Humanos habra en tu equipo(entre 0 y 4)
 		final JSpinner receptorHumano = new JSpinner();
 		receptorHumano.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		receptorHumano.setBounds(118, 506, 30, 20);
@@ -54,7 +63,8 @@ public class EquipoHumano extends JPanel{
 		JLabel lblReceptorHumano = new JLabel("Receptor Humano");
 		lblReceptorHumano.setBounds(84, 529, 115, 13);
 		add(lblReceptorHumano);
-		
+
+//Este JSpiner permite seleccionar cuantos Ogros habra en tu equipo(entre 0 y 1)
 		final JSpinner ogro = new JSpinner();
 		ogro.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		ogro.setBounds(321, 506, 30, 20);
@@ -63,7 +73,8 @@ public class EquipoHumano extends JPanel{
 		JLabel lblOgro = new JLabel("Ogro");
 		lblOgro.setBounds(321, 529, 30, 20);
 		add(lblOgro);
-		
+
+//Este boton te permite crear el equipo siempre y cuando el numero total de jugadores del equipo no sea mayor de 16
 		JButton crearHumano = new JButton("Crear");
 		crearHumano.addMouseListener(new MouseAdapter() {
 			@Override
@@ -92,6 +103,7 @@ public class EquipoHumano extends JPanel{
 		crearHumano.setBounds(377, 569, 85, 21);
 		add(crearHumano);
 		
+		//Este boton te permite volver a la interfaz Creador de equipos
 		JButton atrasHumano = new JButton("Atras");
 		atrasHumano.addMouseListener(new MouseAdapter() {
 			@Override
