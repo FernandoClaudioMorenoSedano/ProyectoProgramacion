@@ -2,6 +2,10 @@ package interfaces;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -48,10 +52,25 @@ public class EquipoCaos extends JPanel{
 		JButton crearCaos = new JButton("Crear");
 		crearCaos.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
+			public void mouseClicked(MouseEvent e) {	
 				int valorCaos1 = (Integer) hombreBestia.getValue();
 				int valorCaos2 = (Integer) guerreroDelCaos.getValue();
 				int valorCaos3 = (Integer) minotauro.getValue();
+				
+				try {
+					Connection conexion=
+							DriverManager.getConnection(
+"jdbc:mysql://127.0.0.1:3306/ProyectoProgramacion","root","admin");
+					Statement smt=conexion.createStatement();
+					Statement smta=conexion.createStatement();
+					Statement smtb=conexion.createStatement();
+					smt.executeUpdate("insert into Jugador" + "values('"+valorCaos1+"')");
+					smta.executeUpdate("insert into Jugador" + "values('"+valorCaos2+"')");
+					smtb.executeUpdate("insert into Jugador" + "values('"+valorCaos3+"')");
+				} catch(SQLException e1) {
+					e1.printStackTrace();
+				}
+				
 				if((valorCaos1+
 					valorCaos2+
 					valorCaos3)>16){
@@ -61,6 +80,7 @@ public class EquipoCaos extends JPanel{
 							JOptionPane.ERROR_MESSAGE);
 				}else {
 					ventana.irAMenuPrincipal();
+					
 				}
 				
 					

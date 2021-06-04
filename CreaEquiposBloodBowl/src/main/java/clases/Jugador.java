@@ -42,7 +42,7 @@ public class Jugador extends CosasConNombre{
 	public static byte getNumMaxPorEquipo() {
 		return numMaxPorEquipo;
 	}
-	public static void setNumMaxPorEquipo(byte numMaxPorEquipo) {
+	public static void setNumMaxPorEquipo(byte numMaxPorEquipo){
 		Jugador.numMaxPorEquipo = numMaxPorEquipo;
 	}
 	@Override
