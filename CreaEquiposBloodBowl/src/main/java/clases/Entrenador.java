@@ -1,9 +1,12 @@
 package clases;
 
+import excepciones.MismoNombreException;
+
 public class Entrenador extends CosasConNombre{
 	private byte numEquipos;
 
-	public Entrenador(String nombre, byte numEquipos) {
+	public Entrenador(String nombre, byte numEquipos) throws MismoNombreException{
+		
 		super(nombre);
 		this.numEquipos = numEquipos;
 	}

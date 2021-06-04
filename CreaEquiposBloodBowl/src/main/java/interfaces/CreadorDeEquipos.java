@@ -19,6 +19,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import enumeraciones.Razas;
+import excepciones.MismoNombreException;
 
 public class CreadorDeEquipos extends JPanel{
 	private JTextField nombre;
@@ -128,8 +129,10 @@ public class CreadorDeEquipos extends JPanel{
 							DriverManager.getConnection(
 "jdbc:mysql://127.0.0.1:3306/ProyectoProgramacion","root","admin");
 					Statement smt=conexion.createStatement();
-					//smt.executeUpdate();
+					smt.executeUpdate("insert into Entrenador" + "values('"+nombre+"')");
 				} catch(SQLException e1) {
+					e1.printStackTrace();
+				}catch(MismoNombreException e1) {
 					e1.printStackTrace();
 				}
 			}
