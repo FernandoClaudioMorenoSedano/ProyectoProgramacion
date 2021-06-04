@@ -1,12 +1,14 @@
 package clases;
 
+import excepciones.NombreVacioException;
+
 public class Jugador extends CosasConNombre{
 	private byte movimiento;
 	private byte fuerza;
 	private byte agilidad;
 	private byte armadura;
 	private static byte numMaxPorEquipo;
-	public Jugador(String nombre, byte movimiento, byte fuerza, byte agilidad, byte armadura) {
+	public Jugador(String nombre, byte movimiento, byte fuerza, byte agilidad, byte armadura) throws NombreVacioException{
 		super(nombre);
 		this.movimiento = movimiento;
 		this.fuerza = fuerza;

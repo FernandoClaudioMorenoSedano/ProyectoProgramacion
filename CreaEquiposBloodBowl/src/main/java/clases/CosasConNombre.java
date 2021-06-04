@@ -1,22 +1,22 @@
 package clases;
 
-import excepciones.MismoNombreException;
+import excepciones.NombreVacioException;
 
 public class CosasConNombre {
 	private String nombre;
 
-	public CosasConNombre(String nombre) {
+	public CosasConNombre(String nombre) throws NombreVacioException{
 		super();
-		this.nombre = nombre;
+	this.setNombre(nombre);
 	}
 
 	public String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) throws MismoNombreException{
-		if(nombre) {
-			throw new MismoNombreException("Este nombre ya Existe");
+	public void setNombre(String nombre) throws NombreVacioException{
+		if(nombre.isEmpty()) {
+			throw new NombreVacioException("No puede haber nombres vacios");
 		}else {
 		this.nombre = nombre;
 		}

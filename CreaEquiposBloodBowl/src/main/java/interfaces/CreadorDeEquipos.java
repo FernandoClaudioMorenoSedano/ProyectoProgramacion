@@ -18,8 +18,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import clases.Equipo;
 import enumeraciones.Razas;
-import excepciones.MismoNombreException;
+import excepciones.NombreVacioException;
 
 public class CreadorDeEquipos extends JPanel{
 	private JTextField nombre;
@@ -104,35 +105,39 @@ public class CreadorDeEquipos extends JPanel{
 		btnSiguiente.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(nombre.getText().isEmpty()||estadio.getText().isEmpty()||entrenador.getText().isEmpty()){
-					JOptionPane.showMessageDialog(ventana,
-							"Tienes que rellenar tanto el nombre del entrenador como el de equipo y el del estadio",
-							"Login fallido",
-							JOptionPane.ERROR_MESSAGE);	
-				}else
-					if(comboRaza.getSelectedItem().equals(Razas.HUMANO)) {
-					ventana.irAEquipoHumano();
-				}else if(comboRaza.getSelectedItem().equals(Razas.ORCO)) {
-					ventana.irAEquipoOrco();
-				}else if(comboRaza.getSelectedItem().equals(Razas.ENANO)) {
-					ventana.irAEquipoEnano();
-				}else if(comboRaza.getSelectedItem().equals(Razas.ELFO)) {
-					ventana.irAEquipoElfo();
-				}else if(comboRaza.getSelectedItem().equals(Razas.CAOS)) {
-					ventana.irAEquipoCaos();
-				}else if(comboRaza.getSelectedItem().equals(Razas.NOMUERTO)) {
-					ventana.irAEquipoNoMuerto();
+				try {
+					ventana.miEquipo=new Equipo(nombre.getText());
+					try {
+						Connection conexion=
+								DriverManager.getConnection(
+	"jdbc:mysql://127.0.0.1:3306/ProyectoProgramacion","root","admin");
+						Statement smt=conexion.createStatement();
+						smt.executeUpdate("insert into Entrenador" + "values('"+nombre+"')");
+					} catch(SQLException e1) {
+						e1.printStackTrace();
+					}
+					
+						if(comboRaza.getSelectedItem().equals(Razas.HUMANO)) {
+						ventana.irAEquipoHumano();
+					}else if(comboRaza.getSelectedItem().equals(Razas.ORCO)) {
+						ventana.irAEquipoOrco();
+					}else if(comboRaza.getSelectedItem().equals(Razas.ENANO)) {
+						ventana.irAEquipoEnano();
+					}else if(comboRaza.getSelectedItem().equals(Razas.ELFO)) {
+						ventana.irAEquipoElfo();
+					}else if(comboRaza.getSelectedItem().equals(Razas.CAOS)) {
+						ventana.irAEquipoCaos();
+					}else if(comboRaza.getSelectedItem().equals(Razas.NOMUERTO)) {
+						ventana.irAEquipoNoMuerto();
+					}
+				} catch (NombreVacioException e2) {
+					JOptionPane.showMessageDialog(ventana, e2.getMessage(),"ERROR",JOptionPane.ERROR_MESSAGE);
+					e2.printStackTrace();
 				}
 				
-				try {
-					Connection conexion=
-							DriverManager.getConnection(
-"jdbc:mysql://127.0.0.1:3306/ProyectoProgramacion","root","admin");
-					Statement smt=conexion.createStatement();
-					smt.executeUpdate("insert into Entrenador" + "values('"+nombre+"')");
-				} catch(SQLException e1) {
-					e1.printStackTrace();
-				}
+				
+				
+				
 			}
 		});
 		btnSiguiente.setFont(new Font("Tahoma", Font.PLAIN, 12));

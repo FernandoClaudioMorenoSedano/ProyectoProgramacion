@@ -9,6 +9,8 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import clases.Equipo;
+
 public class Ventana extends JFrame{
 	private CreadorDeEquipos creadorDeEquipos;
 	private MenuPrincipal menuPrincipal;
@@ -18,6 +20,7 @@ public class Ventana extends JFrame{
 	private EquipoHumano equipoHumano;
 	private EquipoOrco equipoOrco;
 	private EquipoCaos equipoCaos;
+	protected Equipo miEquipo;
 	private PartidoAmistoso partidoAmistoso;
 	public Ventana() {
 		this.setSize(500,650);

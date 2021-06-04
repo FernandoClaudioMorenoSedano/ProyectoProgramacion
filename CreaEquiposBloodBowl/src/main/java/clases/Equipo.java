@@ -3,6 +3,7 @@ package clases;
 import java.util.ArrayList;
 
 import enumeraciones.Razas;
+import excepciones.NombreVacioException;
 
 public class Equipo extends CosasConNombre {
 	private Entrenador entrenador;
@@ -10,13 +11,19 @@ public class Equipo extends CosasConNombre {
 	private ArrayList<Jugador> jugador;
 	private String nombreEstadio;
 	
-	public Equipo(String nombre, Entrenador entrenador, Razas raza, ArrayList<Jugador> jugador, String nombreEstadio) {
+	public Equipo(String nombre, Entrenador entrenador, Razas raza, ArrayList<Jugador> jugador, String nombreEstadio) throws NombreVacioException{
 		super(nombre);
 		this.entrenador = entrenador;
 		this.raza = raza;
 		this.jugador = jugador;
 		this.nombreEstadio = nombreEstadio;
 	}
+	
+
+	public Equipo(String nombre) throws NombreVacioException {
+		super(nombre);
+	}
+
 
 	public Entrenador getEntrenador() {
 		return entrenador;
