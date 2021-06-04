@@ -31,3 +31,4 @@ CREATE TABLE partido (
   numTouchdownEquipoLocal int DEFAULT NULL,
   numTouchdownEquipoVisitante int DEFAULT NULL
 );
+ALTER TABLE Entrenador DROP COLUMN numeroDeEquipos;
