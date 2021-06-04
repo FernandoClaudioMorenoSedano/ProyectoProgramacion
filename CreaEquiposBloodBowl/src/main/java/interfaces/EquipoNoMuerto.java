@@ -11,13 +11,19 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
+/**
+ * Interfaz que permite seleccionar a los jugadores de tu equipo si este es de 
+ * la raza de los No Muertos
+ * @author Fernando
+ */
 public class EquipoNoMuerto extends JPanel{
 	private Ventana ventana;
 	private CreadorDeEquipos creadorDeEquipos;
 	public EquipoNoMuerto(Ventana v) {
 		ventana=v;
 		setLayout(null);
-		
+
+//Este JSpiner permite seleccionar cuantos Zombis habra en tu equipo(entre 0 y 16)
 		final JSpinner zombi = new JSpinner();
 		zombi.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		zombi.setBounds(71, 215, 30, 20);
@@ -27,6 +33,7 @@ public class EquipoNoMuerto extends JPanel{
 		lblZombi.setBounds(70, 240, 41, 20);
 		add(lblZombi);
 		
+//Este JSpiner permite seleccionar cuantos Esqueletos habra en tu equipo(entre 0 y 16)
 		final JSpinner esqueleto = new JSpinner();
 		esqueleto.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		esqueleto.setBounds(223, 215, 30, 20);
@@ -36,6 +43,7 @@ public class EquipoNoMuerto extends JPanel{
 		lblEsqueleto.setBounds(211, 240, 60, 13);
 		add(lblEsqueleto);
 		
+//Este JSpiner permite seleccionar cuantos Tumularios habra en tu equipo(entre 0 y 2)
 		final JSpinner tumulario = new JSpinner();
 		tumulario.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		tumulario.setBounds(396, 215, 30, 20);
@@ -44,7 +52,8 @@ public class EquipoNoMuerto extends JPanel{
 		JLabel lblTumulario = new JLabel("Tumulario");
 		lblTumulario.setBounds(383, 240, 60, 13);
 		add(lblTumulario);
-		
+	
+//Este JSpiner permite seleccionar cuantos Necrofagos habra en tu equipo(entre 0 y 4)
 		final JSpinner necrofago = new JSpinner();
 		necrofago.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		necrofago.setBounds(84, 506, 30, 20);
@@ -53,7 +62,8 @@ public class EquipoNoMuerto extends JPanel{
 		JLabel lblNecrofago = new JLabel("Necrofago");
 		lblNecrofago.setBounds(71, 527, 65, 13);
 		add(lblNecrofago);
-		
+	
+//Este JSpiner permite seleccionar cuantas Momias habra en tu equipo(entre 0 y 2)
 		final JSpinner momia = new JSpinner();
 		momia.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		momia.setBounds(335, 506, 30, 20);
@@ -62,7 +72,8 @@ public class EquipoNoMuerto extends JPanel{
 		JLabel lblMomia = new JLabel("Momia");
 		lblMomia.setBounds(332, 527, 47, 13);
 		add(lblMomia);
-		
+	
+//Este boton te permite crear el equipo siempre y cuando el numero total de jugadores del equipo no sea mayor de 16
 		JButton crearNoMuerto = new JButton("Crear");
 		crearNoMuerto.addMouseListener(new MouseAdapter() {
 			@Override
@@ -91,6 +102,7 @@ public class EquipoNoMuerto extends JPanel{
 		crearNoMuerto.setBounds(377, 569, 85, 21);
 		add(crearNoMuerto);
 		
+		//Este boton te permite volver a la interfaz Creador de equipos
 		JButton atrasNoMuerto = new JButton("Atras");
 		atrasNoMuerto.addMouseListener(new MouseAdapter() {
 			@Override
