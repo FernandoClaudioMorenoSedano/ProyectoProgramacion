@@ -23,7 +23,7 @@ import enumeraciones.Razas;
 import excepciones.NombreVacioException;
 
 /**
- * Interfaz Principal de creacion de equipos
+ * Interfaz Principal de la creacion de equipos
  *
  * @author Fernando
  */
@@ -103,7 +103,7 @@ public class CreadorDeEquipos extends JPanel{
 		add(panelInferior, BorderLayout.SOUTH);
 		
 		
-		//Este es el boton que nos permite volver al menu principal
+		//Este es el boton que nos permite volver a la interfaz MenuPrincipal
 		JButton btnAtras = new JButton("Atras");
 		btnAtras.addMouseListener(new MouseAdapter() {
 			@Override

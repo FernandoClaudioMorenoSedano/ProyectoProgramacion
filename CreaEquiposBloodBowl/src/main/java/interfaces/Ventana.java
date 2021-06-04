@@ -11,6 +11,11 @@ import javax.swing.JPanel;
 
 import clases.Equipo;
 
+/**
+ * Interfaz Principal en la que se muestran las otras interfaces
+ *
+ * @author Fernando
+ */
 public class Ventana extends JFrame{
 	private CreadorDeEquipos creadorDeEquipos;
 	private MenuPrincipal menuPrincipal;
@@ -22,15 +27,20 @@ public class Ventana extends JFrame{
 	private EquipoCaos equipoCaos;
 	protected Equipo miEquipo;
 	private PartidoAmistoso partidoAmistoso;
+	
+	/**
+	 * Esta funcion Hace que se muestre la interfaz MenuPrincipal por defecto al ejecutar el programa
+	 * Ademas de cambiar el icono de la ventana por la imagen Balon_Blood_Bowl.png
+	 */
 	public Ventana() {
 		this.setSize(500,650);
 		this.setTitle("Blood Bowl");
-		//this.setAlwaysOnTop(true);
+		
 		try {
 			BufferedImage icono=ImageIO.read(new File("Balon_Blood_Bowl.png"));
 			this.setIconImage(icono);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -43,6 +53,7 @@ public class Ventana extends JFrame{
 		this.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir o volver a la interfaz CreadorDeEquipos (Al pulsar el boton correspondiente)
 	public void irACreadorDeEquipos() {
 		if(this.creadorDeEquipos==null) {
 			this.creadorDeEquipos=new CreadorDeEquipos(this);
@@ -66,6 +77,7 @@ public class Ventana extends JFrame{
 		this.creadorDeEquipos.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite volver a la interfaz MenuPrincipal (Al pulsar el boton correspondiente)
 	public void irAMenuPrincipal() {
 		if(this.menuPrincipal==null) {
 			this.menuPrincipal=new MenuPrincipal(this);
@@ -89,6 +101,7 @@ public class Ventana extends JFrame{
 		this.menuPrincipal.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir a la interfaz EquipoHumano (Al pulsar el boton correspondiente)
 	public void irAEquipoHumano() {
 		if(this.equipoHumano==null) {
 			this.equipoHumano=new EquipoHumano(this);
@@ -100,6 +113,7 @@ public class Ventana extends JFrame{
 		this.equipoHumano.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir a la interfaz EquipoOrco (Al pulsar el boton correspondiente)
 	public void irAEquipoOrco() {
 		if(this.equipoOrco==null) {
 			this.equipoOrco=new EquipoOrco(this);
@@ -111,6 +125,7 @@ public class Ventana extends JFrame{
 		this.equipoOrco.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir a la interfaz EquipoEnano (Al pulsar el boton correspondiente)
 	public void irAEquipoEnano() {
 		if(this.equipoEnano==null) {
 			this.equipoEnano=new EquipoEnano(this);
@@ -122,6 +137,7 @@ public class Ventana extends JFrame{
 		this.equipoEnano.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir a la interfaz EquipoElfo (Al pulsar el boton correspondiente)
 	public void irAEquipoElfo() {
 		if(this.equipoElfo==null) {
 			this.equipoElfo=new EquipoElfo(this);
@@ -133,6 +149,7 @@ public class Ventana extends JFrame{
 		this.equipoElfo.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir a la interfaz EquipoCaos (Al pulsar el boton correspondiente)
 	public void irAEquipoCaos() {
 		if(this.equipoCaos==null) {
 			this.equipoCaos=new EquipoCaos(this);
@@ -144,6 +161,7 @@ public class Ventana extends JFrame{
 		this.equipoCaos.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir a la interfaz EquipoNoMuerto (Al pulsar el boton correspondiente)
 	public void irAEquipoNoMuerto() {
 		if(this.equipoNoMuerto==null) {
 			this.equipoNoMuerto=new EquipoNoMuerto(this);
@@ -155,6 +173,7 @@ public class Ventana extends JFrame{
 		this.equipoNoMuerto.setVisible(true);
 	}
 	
+	//Esta funcion es la que permite ir a la interfaz PartidoAmistoso (Al pulsar el boton correspondiente)
 	public void irAPartidoAmistoso() {
 		if(this.partidoAmistoso==null) {
 			this.partidoAmistoso=new PartidoAmistoso(this);
