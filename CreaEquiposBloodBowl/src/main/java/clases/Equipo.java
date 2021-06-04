@@ -6,15 +6,15 @@ import enumeraciones.Razas;
 import excepciones.NombreVacioException;
 
 /**
- * Clase abstracta que representa a un equipo
+ * Clase que representa a un equipo
  * @author Fernando
  */
 
 public class Equipo extends CosasConNombre {
-	private Entrenador entrenador;
-	private Razas raza;
-	private ArrayList<Jugador> jugador;
-	private String nombreEstadio;
+	private Entrenador entrenador; //Entrenador del equipo
+	private Razas raza; // Raza del equipo
+	private ArrayList<Jugador> jugador; //Jugadores que componen el equipo
+	private String nombreEstadio; //Nombre del estadio del equipo
 	
 	public Equipo(String nombre, Entrenador entrenador, Razas raza, ArrayList<Jugador> jugador, String nombreEstadio) throws NombreVacioException{
 		super(nombre);

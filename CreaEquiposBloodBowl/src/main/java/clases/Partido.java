@@ -1,10 +1,15 @@
 package clases;
 
+/**
+ * Clase que representa un partido
+ * @author Fernando
+ */
+
 public class Partido {
-	private Equipo equipoLocal;
-	private Equipo equipoVisitante;
-	private byte numTouchdownEquipoLocal;
-	private byte numTouchdownEquipoVisitante;
+	private Equipo equipoLocal; //Equipo local que juega en el partido
+	private Equipo equipoVisitante; //Equipo visitante que juega el partido
+	private byte numTouchdownEquipoLocal; //Numero de touchdowns que ha marcado el equipo local
+	private byte numTouchdownEquipoVisitante; //Numero de touchdowns que ha marcado el equipo visitante
 	
 	public Partido(Equipo equipoLocal, Equipo equipoVisitante, byte numTouchdownEquipoLocal,
 			byte numTouchdownEquipoVisitante) {

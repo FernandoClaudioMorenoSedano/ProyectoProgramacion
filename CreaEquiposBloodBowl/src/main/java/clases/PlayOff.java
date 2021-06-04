@@ -2,8 +2,13 @@ package clases;
 
 import java.util.ArrayList;
 
+/**
+ * Clase que representa una Liga
+ * @author Fernando
+ */
+
 public class PlayOff {
-	private ArrayList<Ronda> rondas;
+	private ArrayList<Ronda> rondas; //Rondas que componen la liga
 
 	public PlayOff(ArrayList<Ronda> rondas) {
 		super();

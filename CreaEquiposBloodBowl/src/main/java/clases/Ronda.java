@@ -2,8 +2,13 @@ package clases;
 
 import java.util.ArrayList;
 
+/**
+ * Clase que representa una Ronda de una Liga
+ * @author Fernando
+ */
+
 public class Ronda {
-	private ArrayList<Partido> partidos;
+	private ArrayList<Partido> partidos;//Partidos que componen la ronda
 
 	public Ronda(ArrayList<Partido> partidos) {
 		super();
