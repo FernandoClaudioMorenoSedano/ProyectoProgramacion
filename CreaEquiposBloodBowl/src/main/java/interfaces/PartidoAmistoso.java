@@ -7,6 +7,8 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class PartidoAmistoso extends JPanel{
 	private Ventana ventana;
@@ -37,6 +39,12 @@ public class PartidoAmistoso extends JPanel{
 		add(lblEquipoVisitante);
 		
 		JButton btnJugarPartido = new JButton("Jugar Partido");
+		btnJugarPartido.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+			}
+		});
 		btnJugarPartido.setBounds(189, 207, 112, 21);
 		add(btnJugarPartido);
 		
