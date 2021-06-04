@@ -102,7 +102,7 @@ public class EquipoNoMuerto extends JPanel{
 		crearNoMuerto.setBounds(377, 569, 85, 21);
 		add(crearNoMuerto);
 		
-		//Este boton te permite volver a la interfaz Creador de equipos
+		//Este boton te permite volver a la interfaz CreadorDeEquipos
 		JButton atrasNoMuerto = new JButton("Atras");
 		atrasNoMuerto.addMouseListener(new MouseAdapter() {
 			@Override

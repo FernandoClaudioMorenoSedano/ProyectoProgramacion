@@ -103,7 +103,7 @@ public class EquipoHumano extends JPanel{
 		crearHumano.setBounds(377, 569, 85, 21);
 		add(crearHumano);
 		
-		//Este boton te permite volver a la interfaz Creador de equipos
+		//Este boton te permite volver a la interfaz CreadorDeEquipos
 		JButton atrasHumano = new JButton("Atras");
 		atrasHumano.addMouseListener(new MouseAdapter() {
 			@Override

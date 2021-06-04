@@ -98,7 +98,7 @@ public class EquipoCaos extends JPanel{
 		crearCaos.setBounds(377, 569, 85, 21);
 		add(crearCaos);
 		
-//Este boton te permite volver a la interfaz Creador de equipos
+//Este boton te permite volver a la interfaz CreadorDeEquipos
 		JButton atrasCaos = new JButton("Atras");
 		atrasCaos.addMouseListener(new MouseAdapter() {
 			@Override

@@ -115,7 +115,7 @@ public class EquipoOrco extends JPanel{
 		crearOrco.setBounds(377, 569, 85, 21);
 		add(crearOrco);
 		
-		//Este boton te permite volver a la interfaz Creador de equipos
+		//Este boton te permite volver a la interfaz CreadorDeEquipos
 		JButton atrasOrco = new JButton("Atras");
 		atrasOrco.addMouseListener(new MouseAdapter() {
 			@Override

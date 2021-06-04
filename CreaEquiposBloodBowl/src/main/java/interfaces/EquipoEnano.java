@@ -102,7 +102,7 @@ public class EquipoEnano extends JPanel{
 		crearEnano.setBounds(377, 569, 85, 21);
 		add(crearEnano);
 		
-		//Este boton te permite volver a la interfaz Creador de equipos
+		//Este boton te permite volver a la interfaz CreadorDeEquipos
 		JButton atrasEnano = new JButton("Atras");
 		atrasEnano.addMouseListener(new MouseAdapter() {
 			@Override
