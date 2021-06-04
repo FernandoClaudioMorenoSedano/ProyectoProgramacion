@@ -132,8 +132,6 @@ public class CreadorDeEquipos extends JPanel{
 					smt.executeUpdate("insert into Entrenador" + "values('"+nombre+"')");
 				} catch(SQLException e1) {
 					e1.printStackTrace();
-				}catch(MismoNombreException e1) {
-					e1.printStackTrace();
 				}
 			}
 		});

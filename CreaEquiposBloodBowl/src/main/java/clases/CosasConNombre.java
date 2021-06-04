@@ -1,5 +1,7 @@
 package clases;
 
+import excepciones.MismoNombreException;
+
 public class CosasConNombre {
 	private String nombre;
 
@@ -12,8 +14,12 @@ public class CosasConNombre {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
+	public void setNombre(String nombre) throws MismoNombreException{
+		if(nombre) {
+			throw new MismoNombreException("Este nombre ya Existe");
+		}else {
 		this.nombre = nombre;
+		}
 	}
 
 	@Override
