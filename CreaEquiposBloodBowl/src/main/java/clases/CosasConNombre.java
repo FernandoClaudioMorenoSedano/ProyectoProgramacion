@@ -2,8 +2,13 @@ package clases;
 
 import excepciones.NombreVacioException;
 
+/**
+ * Clase que representa a un elemento que puede tener nombre
+ * @author Fernando
+ */
+
 public class CosasConNombre {
-	private String nombre;
+	private String nombre; //nombre de la cosa.,
 
 	public CosasConNombre(String nombre) throws NombreVacioException{
 		super();

@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import enumeraciones.Razas;
 import excepciones.NombreVacioException;
 
+/**
+ * Clase abstracta que representa a un equipo
+ * @author Fernando
+ */
+
 public class Equipo extends CosasConNombre {
 	private Entrenador entrenador;
 	private Razas raza;
