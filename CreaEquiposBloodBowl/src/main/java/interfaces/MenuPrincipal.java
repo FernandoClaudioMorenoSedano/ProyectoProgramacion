@@ -10,6 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MenuPrincipal extends JPanel{
 	private Ventana ventana;
@@ -28,6 +30,12 @@ public class MenuPrincipal extends JPanel{
 		});
 		
 		JButton botonJugar = new JButton("Jugar");
+		botonJugar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.irAPartidoAmistoso();
+			}
+		});
 		botonJugar.setFont(new Font("Tahoma", Font.PLAIN, 35));
 		add(botonJugar, BorderLayout.EAST);
 		

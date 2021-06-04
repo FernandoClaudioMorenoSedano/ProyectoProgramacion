@@ -9,7 +9,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 public class PartidoAmistoso extends JPanel{
-	public PartidoAmistoso() {
+	private Ventana ventana;
+	public PartidoAmistoso(Ventana v) {
+		ventana=v;
 		setLayout(null);
 		
 		JComboBox comboEquipoLocal = new JComboBox();
@@ -35,7 +37,7 @@ public class PartidoAmistoso extends JPanel{
 		add(lblEquipoVisitante);
 		
 		JButton btnJugarPartido = new JButton("Jugar Partido");
-		btnJugarPartido.setBounds(200, 207, 98, 21);
+		btnJugarPartido.setBounds(189, 207, 112, 21);
 		add(btnJugarPartido);
 		
 		JButton atrasPartido = new JButton("Atras");

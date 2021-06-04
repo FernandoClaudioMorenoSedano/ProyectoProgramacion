@@ -18,6 +18,7 @@ public class Ventana extends JFrame{
 	private EquipoHumano equipoHumano;
 	private EquipoOrco equipoOrco;
 	private EquipoCaos equipoCaos;
+	private PartidoAmistoso partidoAmistoso;
 	public Ventana() {
 		this.setSize(500,650);
 		this.setTitle("Blood Bowl");
@@ -151,5 +152,15 @@ public class Ventana extends JFrame{
 		this.equipoNoMuerto.setVisible(true);
 	}
 	
+	public void irAPartidoAmistoso() {
+		if(this.partidoAmistoso==null) {
+			this.partidoAmistoso=new PartidoAmistoso(this);
+		}
+		if(this.menuPrincipal!=null) {
+			this.menuPrincipal.setVisible(false);
+		}
+		this.setContentPane(this.partidoAmistoso);
+		this.partidoAmistoso.setVisible(true);
+	}
 }
 
