@@ -9,4 +9,52 @@ public class Equipo extends CosasConNombre {
 	private Razas raza;
 	private ArrayList<Jugador> jugador;
 	private String nombreEstadio;
+	
+	public Equipo(String nombre, Entrenador entrenador, Razas raza, ArrayList<Jugador> jugador, String nombreEstadio) {
+		super(nombre);
+		this.entrenador = entrenador;
+		this.raza = raza;
+		this.jugador = jugador;
+		this.nombreEstadio = nombreEstadio;
+	}
+
+	public Entrenador getEntrenador() {
+		return entrenador;
+	}
+
+	public void setEntrenador(Entrenador entrenador) {
+		this.entrenador = entrenador;
+	}
+
+	public Razas getRaza() {
+		return raza;
+	}
+
+	public void setRaza(Razas raza) {
+		this.raza = raza;
+	}
+
+	public ArrayList<Jugador> getJugador() {
+		return jugador;
+	}
+
+	public void setJugador(ArrayList<Jugador> jugador) {
+		this.jugador = jugador;
+	}
+
+	public String getNombreEstadio() {
+		return nombreEstadio;
+	}
+
+	public void setNombreEstadio(String nombreEstadio) {
+		this.nombreEstadio = nombreEstadio;
+	}
+
+	@Override
+	public String toString() {
+		return "Equipo [entrenador=" + entrenador + ", raza=" + raza + ", jugador=" + jugador + ", nombreEstadio="
+				+ nombreEstadio + "]";
+	}
+	
+	
 }
