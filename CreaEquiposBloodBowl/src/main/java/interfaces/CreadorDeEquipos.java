@@ -22,6 +22,12 @@ import clases.Equipo;
 import enumeraciones.Razas;
 import excepciones.NombreVacioException;
 
+/**
+ * Interfaz Principal de creacion de equipos
+ *
+ * @author Fernando
+ */
+
 public class CreadorDeEquipos extends JPanel{
 	private JTextField nombre;
 	private JTextField estadio;
@@ -32,6 +38,7 @@ public class CreadorDeEquipos extends JPanel{
 		ventana=v;
 		setLayout(new BorderLayout(0, 0));
 		
+		//Titulo principal de la interfaz que aparece en la ventana
 		JLabel lblCreadorDeEquipos = new JLabel("Creador de Equipos");
 		lblCreadorDeEquipos.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblCreadorDeEquipos.setHorizontalAlignment(SwingConstants.CENTER);
@@ -41,6 +48,7 @@ public class CreadorDeEquipos extends JPanel{
 		add(panelCentral, BorderLayout.CENTER);
 		panelCentral.setLayout(null);
 		
+		//Este es el JCombox que nos permite elegir la raza de nuestro equipo
 		final JComboBox comboRaza = new JComboBox();
 		comboRaza.setModel(new DefaultComboBoxModel(Razas.values()));
 		comboRaza.setBounds(10, 43, 99, 23);
@@ -52,6 +60,7 @@ public class CreadorDeEquipos extends JPanel{
 		lblRaza.setBounds(25, 26, 65, 18);
 		panelCentral.add(lblRaza);
 		
+		//Este JText nos permite introducir el nombre de nuestro equipo
 		nombre = new JTextField();
 		nombre.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		nombre.setBounds(133, 93, 307, 32);
@@ -64,6 +73,7 @@ public class CreadorDeEquipos extends JPanel{
 		lblNombreEquipo.setBounds(211, 74, 156, 18);
 		panelCentral.add(lblNombreEquipo);
 		
+		////Este JText nos permite introducir el nombre del estadio de nuestro equipo
 		estadio = new JTextField();
 		estadio.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		estadio.setBounds(133, 153, 307, 32);
@@ -76,6 +86,7 @@ public class CreadorDeEquipos extends JPanel{
 		lblNombreEstadio.setBounds(167, 135, 233, 18);
 		panelCentral.add(lblNombreEstadio);
 		
+		//Este JText nos permite introducir el nombre del entrenador de nuestro equipo
 		entrenador = new JTextField();
 		entrenador.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		entrenador.setColumns(10);
@@ -91,6 +102,8 @@ public class CreadorDeEquipos extends JPanel{
 		JPanel panelInferior = new JPanel();
 		add(panelInferior, BorderLayout.SOUTH);
 		
+		
+		//Este es el boton que nos permite volver al menu principal
 		JButton btnAtras = new JButton("Atras");
 		btnAtras.addMouseListener(new MouseAdapter() {
 			@Override
@@ -101,6 +114,11 @@ public class CreadorDeEquipos extends JPanel{
 		btnAtras.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panelInferior.add(btnAtras);
 		
+		/**
+		 * Este es el boton que nos permite continuar con la creacio de nuestro equipo
+		 * dependiendo de que raza hayamos escojido y siempre y cuando se haya introducido
+		 * un nombre de entrenador de equipo y de estadio, sino lanzara un NombreVacioException
+		 */
 		JButton btnSiguiente = new JButton("Siguiente");
 		btnSiguiente.addMouseListener(new MouseAdapter() {
 			@Override

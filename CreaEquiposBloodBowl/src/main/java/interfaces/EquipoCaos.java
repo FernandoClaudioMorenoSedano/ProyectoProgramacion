@@ -15,6 +15,11 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
+/**
+ * Interfaz que permite seleccionar a los jugadores de tu equipo si este es de 
+ * la raza del Caos
+ * @author Fernando
+ */
 public class EquipoCaos extends JPanel{
 	private Ventana ventana;
 	private CreadorDeEquipos creadorDeEquipos;
@@ -22,6 +27,7 @@ public class EquipoCaos extends JPanel{
 		ventana=v;
 		setLayout(null);
 		
+//Este JSpiner permite seleccionar cuantos Hombres Bestia habra en tu equipo(entre 0 y 16)
 		final JSpinner hombreBestia = new JSpinner();
 		hombreBestia.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		hombreBestia.setBounds(68, 225, 30, 20);
@@ -30,7 +36,8 @@ public class EquipoCaos extends JPanel{
 		JLabel lblHombreBestia = new JLabel("Hombre Bestia");
 		lblHombreBestia.setBounds(54, 248, 100, 13);
 		add(lblHombreBestia);
-		
+
+//Este JSpiner permite seleccionar cuantos Guerreros del Caos habra en tu equipo(entre 0 y 4 )		
 		final JSpinner guerreroDelCaos = new JSpinner();
 		guerreroDelCaos.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		guerreroDelCaos.setBounds(68, 503, 30, 20);
@@ -40,6 +47,7 @@ public class EquipoCaos extends JPanel{
 		lblGuerreroDelCaos.setBounds(40, 528, 114, 13);
 		add(lblGuerreroDelCaos);
 		
+//Este JSpiner permite seleccionar cuantos Minotauros habra en tu equipo(entre 0 y 1)		
 		final JSpinner minotauro = new JSpinner();
 		minotauro.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		minotauro.setBounds(315, 503, 30, 20);
@@ -49,6 +57,7 @@ public class EquipoCaos extends JPanel{
 		lblMinotauro.setBounds(305, 528, 67, 13);
 		add(lblMinotauro);
 		
+//Este boton te permite crear el equipo siempre y cuando el numero total de jugadores del equipo no sea mayor de 16
 		JButton crearCaos = new JButton("Crear");
 		crearCaos.addMouseListener(new MouseAdapter() {
 			@Override
@@ -89,6 +98,7 @@ public class EquipoCaos extends JPanel{
 		crearCaos.setBounds(377, 569, 85, 21);
 		add(crearCaos);
 		
+//Este boton te permite volver a la interfaz Creador de equipos
 		JButton atrasCaos = new JButton("Atras");
 		atrasCaos.addMouseListener(new MouseAdapter() {
 			@Override
