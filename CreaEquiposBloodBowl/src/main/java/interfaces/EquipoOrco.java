@@ -12,13 +12,19 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
 
+/**
+ * Interfaz que permite seleccionar a los jugadores de tu equipo si este es de 
+ * la raza de los Orcos
+ * @author Fernando
+ */
 public class EquipoOrco extends JPanel{
 	private Ventana ventana;
 	private CreadorDeEquipos creadorDeEquipos;
 	public EquipoOrco(Ventana v) {
 		ventana=v;
 		setLayout(null);
-		
+	
+//Este JSpiner permite seleccionar cuantos Lineas Orcos habra en tu equipo(entre 0 y 16)
 		final JSpinner lineaOrco = new JSpinner();
 		lineaOrco.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		lineaOrco.setBounds(60, 232, 30, 20);
@@ -28,6 +34,7 @@ public class EquipoOrco extends JPanel{
 		lblLineaOrco.setBounds(45, 248, 69, 20);
 		add(lblLineaOrco);
 		
+//Este JSpiner permite seleccionar cuantos Blizters Orcos habra en tu equipo(entre 0 y 4)
 		final JSpinner blizterOrco = new JSpinner();
 		blizterOrco.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		blizterOrco.setBounds(232, 232, 30, 20);
@@ -36,7 +43,8 @@ public class EquipoOrco extends JPanel{
 		JLabel lblBlizterOrco = new JLabel("Blizter Orco");
 		lblBlizterOrco.setBounds(214, 252, 69, 13);
 		add(lblBlizterOrco);
-		
+	
+//Este JSpiner permite seleccionar cuantos Lanzadores Orcos habra en tu equipo(entre 0 y 2)
 		final JSpinner lanzadorOrco = new JSpinner();
 		lanzadorOrco.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		lanzadorOrco.setBounds(377, 232, 30, 20);
@@ -45,7 +53,8 @@ public class EquipoOrco extends JPanel{
 		JLabel lblLanzadorOrco = new JLabel("Lanzador Orco");
 		lblLanzadorOrco.setBounds(354, 252, 85, 13);
 		add(lblLanzadorOrco);
-		
+	
+//Este JSpiner permite seleccionar cuantos Orcos Negros habra en tu equipo(entre 0 y 4)
 		final JSpinner orcoNegro = new JSpinner();
 		orcoNegro.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		orcoNegro.setBounds(60, 515, 30, 20);
@@ -55,6 +64,7 @@ public class EquipoOrco extends JPanel{
 		lblOrcoNegro.setBounds(45, 534, 69, 20);
 		add(lblOrcoNegro);
 		
+//Este JSpiner permite seleccionar cuantos Lineas Orcos habra en tu equipo(entre 0 y 1)
 		final JSpinner troll = new JSpinner();
 		troll.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		troll.setBounds(232, 515, 30, 20);
@@ -64,6 +74,7 @@ public class EquipoOrco extends JPanel{
 		lblTroll.setBounds(232, 534, 30, 13);
 		add(lblTroll);
 		
+//Este JSpiner permite seleccionar cuantos Goblins habra en tu equipo(entre 0 y 4)
 		final JSpinner goblin = new JSpinner();
 		goblin.setModel(new SpinnerNumberModel(0, 0, 4, 1));
 		goblin.setBounds(377, 515, 30, 20);
@@ -72,7 +83,8 @@ public class EquipoOrco extends JPanel{
 		JLabel lblGoblin = new JLabel("Goblin");
 		lblGoblin.setBounds(373, 538, 42, 13);
 		add(lblGoblin);
-		
+
+//Este boton te permite crear el equipo siempre y cuando el numero total de jugadores del equipo no sea mayor de 16
 		JButton crearOrco = new JButton("Crear");
 		crearOrco.addMouseListener(new MouseAdapter() {
 			@Override
@@ -103,6 +115,7 @@ public class EquipoOrco extends JPanel{
 		crearOrco.setBounds(377, 569, 85, 21);
 		add(crearOrco);
 		
+		//Este boton te permite volver a la interfaz Creador de equipos
 		JButton atrasOrco = new JButton("Atras");
 		atrasOrco.addMouseListener(new MouseAdapter() {
 			@Override
