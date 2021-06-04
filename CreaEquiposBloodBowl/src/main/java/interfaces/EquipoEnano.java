@@ -12,13 +12,18 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
 
+/**
+ * Interfaz que permite seleccionar a los jugadores de tu equipo si este es de 
+ * la raza de los Enanos
+ * @author Fernando
+ */
 public class EquipoEnano extends JPanel{
 	private Ventana ventana;
 	private CreadorDeEquipos creadorDeEquipos;
 	public EquipoEnano(Ventana v) {
 		ventana=v;
 		setLayout(null);
-		
+//Este JSpiner permite seleccionar cuantos BarbasLargas habra en tu equipo(entre 0 y 16)		
 		final JSpinner barbasLargas = new JSpinner();
 		barbasLargas.setModel(new SpinnerNumberModel(0, 0, 16, 1));
 		barbasLargas.setBounds(69, 176, 30, 20);
@@ -28,6 +33,7 @@ public class EquipoEnano extends JPanel{
 		lblBarbasLargas.setBounds(47, 201, 78, 20);
 		add(lblBarbasLargas);
 		
+//Este JSpiner permite seleccionar cuantos Blizters Enanos habra en tu equipo(entre 0 y 2)		
 		final JSpinner blizterEnano = new JSpinner();
 		blizterEnano.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		blizterEnano.setBounds(230, 176, 30, 20);
@@ -37,6 +43,7 @@ public class EquipoEnano extends JPanel{
 		lblBlizterEnano.setBounds(210, 205, 78, 13);
 		add(lblBlizterEnano);
 		
+//Este JSpiner permite seleccionar cuantos Corredores Enanos habra en tu equipo(entre 0 y 2)		
 		final JSpinner corredorEnano = new JSpinner();
 		corredorEnano.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		corredorEnano.setBounds(377, 176, 30, 20);
@@ -46,6 +53,7 @@ public class EquipoEnano extends JPanel{
 		lblCorredorEnano.setBounds(353, 205, 95, 13);
 		add(lblCorredorEnano);
 		
+//Este JSpiner permite seleccionar cuantos MataTrolls habra en tu equipo(entre 0 y 2)		
 		final JSpinner mataTrolls = new JSpinner();
 		mataTrolls.setModel(new SpinnerNumberModel(0, 0, 2, 1));
 		mataTrolls.setBounds(95, 473, 30, 20);
@@ -54,7 +62,8 @@ public class EquipoEnano extends JPanel{
 		JLabel lblMataTrolls = new JLabel("MataTrolls");
 		lblMataTrolls.setBounds(90, 503, 65, 13);
 		add(lblMataTrolls);
-		
+
+//Este JSpiner permite seleccionar cuantas Apisonadoras habra en tu equipo(entre 0 y 1)
 		final JSpinner apisonadora = new JSpinner();
 		apisonadora.setModel(new SpinnerNumberModel(0, 0, 1, 1));
 		apisonadora.setBounds(340, 473, 30, 20);
@@ -64,6 +73,7 @@ public class EquipoEnano extends JPanel{
 		lblApisonadora.setBounds(320, 503, 71, 13);
 		add(lblApisonadora);
 		
+//Este boton te permite crear el equipo siempre y cuando el numero total de jugadores del equipo no sea mayor de 16		
 		JButton crearEnano = new JButton("Crear");
 		crearEnano.addMouseListener(new MouseAdapter() {
 			@Override
@@ -92,6 +102,7 @@ public class EquipoEnano extends JPanel{
 		crearEnano.setBounds(377, 569, 85, 21);
 		add(crearEnano);
 		
+		//Este boton te permite volver a la interfaz Creador de equipos
 		JButton atrasEnano = new JButton("Atras");
 		atrasEnano.addMouseListener(new MouseAdapter() {
 			@Override
