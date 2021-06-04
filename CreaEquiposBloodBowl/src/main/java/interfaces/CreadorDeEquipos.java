@@ -4,6 +4,10 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -119,6 +123,15 @@ public class CreadorDeEquipos extends JPanel{
 					ventana.irAEquipoNoMuerto();
 				}
 				
+				try {
+					Connection conexion=
+							DriverManager.getConnection(
+"jdbc:mysql://127.0.0.1:3306/ProyectoProgramacion","root","admin");
+					Statement smt=conexion.createStatement();
+				
+				} catch(SQLException e1) {
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnSiguiente.setFont(new Font("Tahoma", Font.PLAIN, 12));
